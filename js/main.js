@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentY = window.scrollY;
 
         if (navbar) {
-          // Shadow on scroll
-          if (currentY > 50) {
-            navbar.style.boxShadow = '0 4px 24px rgba(27,59,43,0.12)';
-          } else {
-            navbar.style.boxShadow = '0 2px 20px rgba(27,59,43,0.06)';
-          }
-          // Hide/show logic
+          // Hide when scrolling down, show when scrolling up
           if (currentY > lastScrollY && currentY > 100) {
             navbar.style.transform = 'translateY(-100%)';
           } else {
             navbar.style.transform = 'translateY(0)';
+          }
+
+          if (currentY > 50) {
+            navbar.style.boxShadow = '0 4px 28px rgba(42, 4, 10, 0.55)';
+          } else {
+            navbar.style.boxShadow = '0 4px 20px rgba(42, 4, 10, 0.35)';
           }
         }
 
@@ -43,6 +43,52 @@ document.addEventListener('DOMContentLoaded', function () {
       ticking = true;
     }
   });
+
+  /* ========================================================
+     1b. MOBILE SIDE DRAWER (SLIDE IN FROM RIGHT)
+     ======================================================== */
+  const navbarCollapse = document.getElementById('navbarContent');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  if (navbarCollapse && navbarToggler) {
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+      document.body.classList.add('mobile-menu-open');
+      const icon = navbarToggler.querySelector('i');
+      if (icon) icon.className = 'fa-solid fa-xmark';
+    });
+
+    navbarCollapse.addEventListener('hide.bs.collapse', function () {
+      document.body.classList.remove('mobile-menu-open');
+      const icon = navbarToggler.querySelector('i');
+      if (icon) icon.className = 'fa-solid fa-bars';
+    });
+
+    // Close menu on backdrop click
+    document.addEventListener('click', function (e) {
+      if (
+        document.body.classList.contains('mobile-menu-open') &&
+        !navbarCollapse.contains(e.target) &&
+        !navbarToggler.contains(e.target)
+      ) {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+      }
+    });
+
+    // Close menu when clicking nav link
+    navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (document.body.classList.contains('mobile-menu-open')) {
+          if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) bsCollapse.hide();
+          }
+        }
+      });
+    });
+  }
 
   /* ========================================================
      2. BACK TO TOP

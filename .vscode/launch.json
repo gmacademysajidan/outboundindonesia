@@ -7,9 +7,14 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "name": "Launch index.html directly",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Current HTML File",
+            "file": "${file}"
         }
     ]
 }

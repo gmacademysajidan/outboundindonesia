@@ -16,31 +16,43 @@
 
 <body>
 
-  <!-- Navigation Bar (Sticky Top with Uniform Logo & Right Aligned Hamburger) -->
+  <!-- Navigation Bar (Sticky Top with Logo, Desktop Nav & Mobile Offcanvas Trigger) -->
   <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand m-0" href="/">
         <i class="fa-solid fa-leaf"></i>
         <span class="brand-title">AGRO WONOSARI <small class="brand-sub">OUTBOUND & TEA GARDEN</small></span>
       </a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Hamburger Button for Mobile Drawer -->
+      <button class="mobile-menu-toggler d-lg-none ms-auto" type="button" id="mobileMenuOpenBtn" aria-label="Buka Menu Mobile">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Tombol Close (✕) menu mobile — muncul hanya saat menu terbuka -->
-      <button type="button" id="navbarCloseBtn" class="navbar-close-btn" aria-label="Tutup menu">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Desktop Navigation Menu -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
           <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="paket.html">Paket Outbound</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="paket.html" id="desktopPaketDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paket Outbound
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="desktopPaketDropdown" style="border-radius:12px; border:1px solid rgba(212,175,55,0.25);">
+              <li><a class="dropdown-item py-2 fw-semibold text-warning" href="paket.html"><i class="fa-solid fa-boxes-packing me-2"></i>Semua Paket Outbound</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2" href="Outbound-Team-Building-Corporate-Malang.html">Corporate Team Building</a></li>
+              <li><a class="dropdown-item py-2" href="Fun-Outbound-Malang.html">Fun Outbound Games</a></li>
+              <li><a class="dropdown-item py-2" href="Outbound-Sekolah-dan-Mahasiswa-Malang.html">Outbound Sekolah & Mahasiswa</a></li>
+              <li><a class="dropdown-item py-2" href="Paintball-Full-Combat-Malang.html">Paintball Combat</a></li>
+              <li><a class="dropdown-item py-2" href="Rafting-Arung-Jeram-Malang.html">Rafting & Adventure</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="fasilitas.html">Fasilitas</a></li>
           <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <li class="nav-item ms-lg-3">
             <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20tanya%20paket%20outbound"
               target="_blank" class="btn btn-amber text-dark px-4 py-2" style="font-size: 0.9rem;">
               <i class="fa-brands fa-whatsapp"></i> Reservasi

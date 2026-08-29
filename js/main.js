@@ -40,49 +40,190 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ========================================================
-     1b. MOBILE SIDE DRAWER HANDLER
+     1b. MOBILE OFFCANVAS NAVIGATION DRAWER & COLLAPSIBLE DROPDOWN
      ======================================================== */
-  const navbarCollapse = document.getElementById('navbarContent');
-  const navbarToggler = document.querySelector('.navbar-toggler');
+  
+  // Dynamic Offcanvas Drawer markup injector & handler
+  function ensureMobileOffcanvasMarkup() {
+    let backdrop = document.getElementById('mobileOffcanvasBackdrop');
+    let drawer = document.getElementById('mobileOffcanvasDrawer');
 
-  if (navbarCollapse && navbarToggler) {
-    navbarCollapse.addEventListener('show.bs.collapse', function () {
-      document.body.classList.add('mobile-menu-open');
-      const icon = navbarToggler.querySelector('i');
-      if (icon) icon.className = 'fa-solid fa-xmark';
-    });
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.id = 'mobileOffcanvasBackdrop';
+      backdrop.className = 'mobile-offcanvas-backdrop';
+      document.body.appendChild(backdrop);
+    }
 
-    navbarCollapse.addEventListener('hide.bs.collapse', function () {
-      document.body.classList.remove('mobile-menu-open');
-      const icon = navbarToggler.querySelector('i');
-      if (icon) icon.className = 'fa-solid fa-bars';
-    });
+    if (!drawer) {
+      drawer = document.createElement('aside');
+      drawer.id = 'mobileOffcanvasDrawer';
+      drawer.className = 'mobile-offcanvas-drawer';
+      drawer.setAttribute('aria-label', 'Navigasi Mobile');
+      drawer.innerHTML = `
+        <div class="mobile-offcanvas-header">
+          <div class="mobile-offcanvas-brand">
+            <i class="fa-solid fa-leaf text-gold fs-5"></i>
+            <div class="d-flex flex-column" style="line-height:1.2;">
+              <span class="fw-bold text-white fs-6">AGRO WONOSARI</span>
+              <small class="text-gold text-uppercase" style="font-size: 0.6rem; letter-spacing: 0.5px;">OUTBOUND & TEA GARDEN</small>
+            </div>
+          </div>
+          <button type="button" class="mobile-offcanvas-close-btn" id="mobileMenuCloseBtn" aria-label="Tutup Menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mobile-offcanvas-body">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="/">
+                <i class="fa-solid fa-house me-3 text-gold"></i>Beranda
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="tentang.html">
+                <i class="fa-solid fa-circle-info me-3 text-gold"></i>Tentang Kami
+              </a>
+            </li>
 
-    // Close drawer when tapping outside drawer and outside toggler
-    document.addEventListener('click', function (e) {
-      if (!document.body.classList.contains('mobile-menu-open')) return;
+            <!-- Collapsible Dropdown for 'Paket Outbound' -->
+            <li class="mobile-nav-item mobile-dropdown-item">
+              <div class="mobile-dropdown-trigger">
+                <a href="paket.html" class="mobile-nav-link mobile-dropdown-link-main">
+                  <i class="fa-solid fa-boxes-packing me-3 text-gold"></i>Paket Outbound
+                </a>
+                <button type="button" class="mobile-dropdown-toggle-btn" id="mobilePaketToggleBtn" aria-expanded="false" aria-label="Buka Submenu Paket">
+                  <i class="fa-solid fa-chevron-right dropdown-arrow-icon"></i>
+                </button>
+              </div>
 
-      const isInsideDrawer = e.target.closest('#navbarContent');
-      const isToggler = e.target.closest('.navbar-toggler');
-      const isCloseBtn = e.target.closest('#navbarCloseBtn');
+              <div class="mobile-submenu-wrapper" id="mobilePaketSubmenu">
+                <ul class="mobile-submenu-list">
+                  <li>
+                    <a href="paket.html" class="mobile-submenu-item highlight-gold">
+                      <i class="fa-solid fa-layer-group me-2"></i>Lihat Semua Paket
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Outbound-Team-Building-Corporate-Malang.html" class="mobile-submenu-item">
+                      <i class="fa-solid fa-briefcase me-2"></i>Corporate Team Building
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Fun-Outbound-Malang.html" class="mobile-submenu-item">
+                      <i class="fa-solid fa-face-smile me-2"></i>Fun Outbound Games
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Outbound-Sekolah-dan-Mahasiswa-Malang.html" class="mobile-submenu-item">
+                      <i class="fa-solid fa-graduation-cap me-2"></i>Outbound Sekolah & Mahasiswa
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Paintball-Full-Combat-Malang.html" class="mobile-submenu-item">
+                      <i class="fa-solid fa-crosshairs me-2"></i>Paintball Combat
+                    </a>
+                  </li>
+                  <li>
+                    <a href="Rafting-Arung-Jeram-Malang.html" class="mobile-submenu-item">
+                      <i class="fa-solid fa-water me-2"></i>Rafting & Adventure
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-      if (!isInsideDrawer && !isToggler && !isCloseBtn) {
-        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse) bsCollapse.hide();
-        }
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="fasilitas.html">
+                <i class="fa-solid fa-building me-3 text-gold"></i>Fasilitas
+              </a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link" href="artikel.html">
+                <i class="fa-solid fa-newspaper me-3 text-gold"></i>Artikel
+              </a>
+            </li>
+          </ul>
+
+          <div class="mobile-offcanvas-footer mt-auto pt-4">
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20tanya%20paket%20outbound"
+              target="_blank" class="btn btn-amber w-100 py-3 text-dark fw-bold rounded-3 shadow d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-brands fa-whatsapp fs-5"></i> Reservasi WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(drawer);
+    }
+
+    // Set active link based on current path
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    drawer.querySelectorAll('.mobile-nav-link, .mobile-submenu-item').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath || (currentPath === 'index.html' && href === '/')) {
+        link.classList.add('active');
       }
     });
+  }
 
-    // ── Tombol close (✕) di pojok kanan atas menu mobile ──
-    const navbarCloseBtn = document.getElementById('navbarCloseBtn');
-    if (navbarCloseBtn) {
-      navbarCloseBtn.addEventListener('click', function () {
-        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
-                          || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-          bsCollapse.hide();
-        }
+  ensureMobileOffcanvasMarkup();
+
+  const mobileOffcanvasDrawer = document.getElementById('mobileOffcanvasDrawer');
+  const mobileOffcanvasBackdrop = document.getElementById('mobileOffcanvasBackdrop');
+  const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
+  const navbarTogglerButtons = document.querySelectorAll('.navbar-toggler, .mobile-menu-toggler, #navbarTogglerBtn');
+
+  function openMobileOffcanvas() {
+    if (mobileOffcanvasDrawer) mobileOffcanvasDrawer.classList.add('show');
+    if (mobileOffcanvasBackdrop) mobileOffcanvasBackdrop.classList.add('show');
+    document.body.classList.add('mobile-offcanvas-open');
+  }
+
+  function closeMobileOffcanvas() {
+    if (mobileOffcanvasDrawer) mobileOffcanvasDrawer.classList.remove('show');
+    if (mobileOffcanvasBackdrop) mobileOffcanvasBackdrop.classList.remove('show');
+    document.body.classList.remove('mobile-offcanvas-open');
+  }
+
+  navbarTogglerButtons.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (mobileOffcanvasDrawer && mobileOffcanvasDrawer.classList.contains('show')) {
+        closeMobileOffcanvas();
+      } else {
+        openMobileOffcanvas();
+      }
+    });
+  });
+
+  if (mobileMenuCloseBtn) {
+    mobileMenuCloseBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      closeMobileOffcanvas();
+    });
+  }
+
+  if (mobileOffcanvasBackdrop) {
+    mobileOffcanvasBackdrop.addEventListener('click', closeMobileOffcanvas);
+  }
+
+  if (mobileOffcanvasDrawer) {
+    mobileOffcanvasDrawer.querySelectorAll('a.mobile-nav-link:not(.mobile-dropdown-link-main), a.mobile-submenu-item').forEach(link => {
+      link.addEventListener('click', closeMobileOffcanvas);
+    });
+
+    // Collapsible Dropdown for Paket Outbound (> to v arrow)
+    const mobilePaketToggleBtn = document.getElementById('mobilePaketToggleBtn');
+    const mobilePaketSubmenu = document.getElementById('mobilePaketSubmenu');
+
+    if (mobilePaketToggleBtn && mobilePaketSubmenu) {
+      mobilePaketToggleBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        mobilePaketSubmenu.classList.toggle('open');
       });
     }
   }

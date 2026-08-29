@@ -255,7 +255,24 @@ nav.navbar-custom .navbar-brand {
   line-height: 1 !important;
 }
 
-/* Brand leaf icon */
+/* Brand logo image */
+nav.navbar-custom a.navbar-brand img.navbar-logo,
+nav.navbar-custom .navbar-brand img.navbar-logo,
+.navbar-logo {
+  height: 42px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s var(--ease) !important;
+}
+
+nav.navbar-custom a.navbar-brand:hover img.navbar-logo,
+nav.navbar-custom .navbar-brand:hover img.navbar-logo {
+  transform: scale(1.06) !important;
+}
+
+/* Brand leaf icon (fallback) */
 nav.navbar-custom a.navbar-brand i,
 nav.navbar-custom .navbar-brand>i {
   color: var(--primary-green) !important;

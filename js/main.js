@@ -117,10 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ========================================================
      6. ACTIVE NAVBAR LINK
      ======================================================== */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPage = window.location.pathname.split('/').pop();
+  const isHomeCurrent = !currentPage || currentPage === 'index.html';
   document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
     const href = link.getAttribute('href') || '';
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    const isHomeHref = href === '/' || href === '' || href === 'index.html';
+    if ((isHomeCurrent && isHomeHref) || (!isHomeCurrent && href === currentPage)) {
       link.classList.add('active');
     }
   });

@@ -340,6 +340,16 @@ nav.navbar-custom .navbar-brand .brand-sub {
   outline: none !important;
 }
 
+/* Nonaktifkan Bootstrap collapse di mobile agar tidak terjadi double menu di belakang Offcanvas */
+@media (max-width: 991.98px) {
+  .navbar-custom #navbarContent,
+  .navbar-custom #navbarContent.collapse,
+  .navbar-custom #navbarContent.collapsing,
+  .navbar-custom #navbarContent.show {
+    display: none !important;
+  }
+}
+
 /* Offcanvas Overlay Backdrop */
 .mobile-offcanvas-backdrop {
   position: fixed;
@@ -2590,4 +2600,117 @@ nav.navbar-custom .navbar-brand .brand-sub {
     z-index: 99999 !important;
     cursor: pointer !important;
   }
+}
+
+/* ──────────────────────────────────────────────────────────
+   PREMIUM ARTICLE DETAIL STYLES (Nyaman Dibaca & Modern Aesthetics)
+   ────────────────────────────────────────────────────────── */
+.article-hero-img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.article-hero-img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+}
+
+.article-content-img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Meta info bar */
+.article-meta-bar {
+  background: #f8faf9;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.article-meta-bar i {
+  color: var(--primary-maroon);
+}
+
+/* Enhanced Baca Juga Callout Box */
+.baca-juga-box,
+div.my-4.p-3.border-start.border-4 {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f7f2ec 100%) !important;
+  border-start-color: var(--primary-maroon) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease !important;
+}
+.baca-juga-box:hover,
+div.my-4.p-3.border-start.border-4:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 24px rgba(128, 0, 32, 0.1) !important;
+}
+
+/* Section Cards in Article */
+.card.border-start.border-4.border-success,
+.article-section-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-left: 4px solid var(--primary-maroon) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s ease !important;
+}
+.card.border-start.border-4.border-success:hover,
+.article-section-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(128, 0, 32, 0.08) !important;
+}
+
+/* Article Typography Comfort */
+.article-body-p,
+.section-white p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #333333;
+}
+.section-white h4,
+.section-white h3,
+.section-white h2 {
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* Author Card */
+.author-card {
+  background: #fdfbf7;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Related Articles Card Hover */
+.custom-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+.custom-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12) !important;
 }

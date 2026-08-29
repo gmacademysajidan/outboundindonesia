@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="mobile-offcanvas-brand">
             <i class="fa-solid fa-leaf text-gold fs-5"></i>
             <div class="d-flex flex-column" style="line-height:1.2;">
-              <span class="fw-bold text-white fs-6">AGRO WONOSARI</span>
-              <small class="text-gold text-uppercase" style="font-size: 0.6rem; letter-spacing: 0.5px;">OUTBOUND & TEA GARDEN</small>
+              <span class="fw-bold text-white fs-6">OUTBOUND INDONESIA</span>
+              <small class="text-gold text-uppercase" style="font-size: 0.6rem; letter-spacing: 0.5px;">PRO &amp; ENTERTAINMENT</small>
             </div>
           </div>
           <button type="button" class="mobile-offcanvas-close-btn" id="mobileMenuCloseBtn" aria-label="Tutup Menu">

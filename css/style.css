@@ -103,6 +103,7 @@ body {
   color: var(--text-body);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  padding-top: 76px !important;
 }
 
 h1,
@@ -1745,6 +1746,10 @@ body.mobile-offcanvas-open {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 66px !important;
+  }
+
   .hero-section {
     padding: 72px 0 58px;
     min-height: auto;

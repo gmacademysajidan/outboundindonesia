@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </ul>
 
           <div class="mobile-offcanvas-footer mt-auto pt-4">
-            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20tanya%20paket%20outbound"
+            <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20tanya%20paket%20outbound"
               target="_blank" class="btn btn-amber w-100 py-3 text-dark fw-bold rounded-3 shadow d-flex align-items-center justify-content-center gap-2">
               <i class="fa-brands fa-whatsapp fs-5"></i> Reservasi WhatsApp
             </a>
@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const waBtn = document.getElementById('modalFasWaBtn');
       if (waBtn) {
-        waBtn.href = `https://wa.me/6281234567890?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20konsultasi%20ketersediaan%20fasilitas%20${encodeURIComponent(title)}`;
+        waBtn.href = `https://wa.me/6282211221909?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20konsultasi%20ketersediaan%20fasilitas%20${encodeURIComponent(title)}`;
       }
     });
   }

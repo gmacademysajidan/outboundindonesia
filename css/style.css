@@ -89,15 +89,20 @@
 
 html {
   height: 100%;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  touch-action: manipulation;
 }
 
 body {
-  width: 100%;
-  max-width: 100vw;
+  width: 100% !important;
+  max-width: 100% !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden !important;
+  position: relative;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-white);
   color: var(--text-body);
@@ -3095,4 +3100,50 @@ img {
 /* Font Display Swap */
 @font-face {
   font-display: swap;
+}
+
+/* ──────────────────────────────────────────────────────────
+   MOBILE ANTI-WOBBLE & LAYOUT STABILITY SYSTEM
+   ────────────────────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    touch-action: pan-y !important;
+  }
+
+  /* Prevent Bootstrap negative margin grid overflow */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Prevent animation / reveal horizontal jittering */
+  [data-reveal],
+  [data-reveal-blur],
+  [data-reveal-scale] {
+    will-change: opacity, transform;
+    max-width: 100% !important;
+  }
+
+  /* Stabilize floating widgets */
+  .floating-widget-group {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  /* Mobile drawer boundary protection */
+  .mobile-offcanvas-drawer {
+    max-width: 85vw !important;
+  }
 }

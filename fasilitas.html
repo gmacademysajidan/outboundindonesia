@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    /* Custom Fasilitas Styles (Referenced Layout Aesthetics) */
+    /* Custom Fasilitas Styles (Aligned with Royal Maroon & Gold Theme) */
     .fas-hero-v2 {
-      background: linear-gradient(135deg, rgba(27,59,43,0.88) 0%, rgba(46,125,50,0.82) 100%), url('assets/img/Green_field_for_corporate_gathering_202608051855.webp') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(59, 4, 13, 0.92) 0%, rgba(128, 0, 32, 0.88) 100%), url('assets/img/Green_field_for_corporate_gathering_202608051855.webp') center/cover no-repeat;
       padding: 85px 0 75px;
       color: #ffffff;
       text-align: center;
@@ -23,10 +23,10 @@
     
     .fas-grid-card {
       background: #ffffff;
-      border: 1px solid rgba(76, 175, 80, 0.16);
+      border: 1px solid rgba(128, 0, 32, 0.14);
       border-radius: var(--radius-lg, 20px);
       overflow: hidden;
-      box-shadow: 0 6px 24px rgba(27, 59, 43, 0.07);
+      box-shadow: 0 6px 24px rgba(59, 4, 13, 0.06);
       transition: transform 0.35s var(--ease, ease), box-shadow 0.35s ease, border-color 0.35s ease;
       height: 100%;
       display: flex;
@@ -36,8 +36,8 @@
 
     .fas-grid-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 40px rgba(46, 125, 50, 0.14);
-      border-color: rgba(76, 175, 80, 0.35);
+      box-shadow: 0 16px 40px rgba(128, 0, 32, 0.14);
+      border-color: rgba(212, 175, 55, 0.4);
     }
 
     .fas-img-wrapper {
@@ -45,7 +45,7 @@
       width: 100%;
       height: 210px;
       overflow: hidden;
-      background: #e9f5ea;
+      background: var(--soft-maroon-bg, #FDF2F4);
     }
 
     .fas-img-wrapper img {
@@ -67,13 +67,13 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #4CAF50, #2E7D32);
-      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary-maroon, #800020), var(--dark-maroon, #580B17));
+      color: var(--accent-gold, #D4AF37);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.15rem;
-      box-shadow: 0 6px 16px rgba(46, 125, 50, 0.35);
+      box-shadow: 0 6px 16px rgba(59, 4, 13, 0.35);
       border: 2px solid #ffffff;
       z-index: 2;
     }
@@ -89,13 +89,13 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 1.15rem;
-      color: var(--text-dark, #1A2E1D);
+      color: var(--text-dark, #2A0A10);
       margin-bottom: 8px;
     }
 
     .fas-card-desc {
       font-size: 0.88rem;
-      color: var(--text-muted, #6C757D);
+      color: var(--text-muted, #7D676A);
       line-height: 1.6;
       margin-bottom: 16px;
     }
@@ -112,14 +112,14 @@
 
     .fas-feature-list li {
       font-size: 0.85rem;
-      color: var(--text-body, #374340);
+      color: var(--text-body, #4A3639);
       display: flex;
       align-items: flex-start;
       gap: 8px;
     }
 
     .fas-feature-list li i {
-      color: #4CAF50;
+      color: var(--primary-maroon, #800020);
       font-size: 0.95rem;
       margin-top: 2px;
       flex-shrink: 0;
@@ -128,20 +128,20 @@
     /* Service List Cards (Layanan Lengkap Tanpa Ribet) */
     .service-item-card {
       background: #ffffff;
-      border: 1px solid rgba(76, 175, 80, 0.16);
+      border: 1px solid rgba(128, 0, 32, 0.14);
       border-radius: 16px;
       padding: 20px 22px;
       display: flex;
       align-items: flex-start;
       gap: 16px;
-      box-shadow: 0 4px 16px rgba(46, 125, 50, 0.05);
+      box-shadow: 0 4px 16px rgba(59, 4, 13, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
 
     .service-item-card:hover {
       transform: translateX(6px);
-      box-shadow: 0 10px 28px rgba(46, 125, 50, 0.12);
-      border-color: rgba(76, 175, 80, 0.35);
+      box-shadow: 0 10px 28px rgba(128, 0, 32, 0.12);
+      border-color: rgba(212, 175, 55, 0.4);
     }
 
     .service-icon-box {
@@ -149,8 +149,8 @@
       height: 48px;
       min-width: 48px;
       border-radius: 12px;
-      background: #E8F5E9;
-      color: #2E7D32;
+      background: var(--soft-maroon-bg, #FDF2F4);
+      color: var(--primary-maroon, #800020);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -165,13 +165,13 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
-      color: var(--text-dark, #1A2E1D);
+      color: var(--text-dark, #2A0A10);
       margin-bottom: 4px;
     }
 
     .service-item-desc {
       font-size: 0.85rem;
-      color: var(--text-muted, #6C757D);
+      color: var(--text-muted, #7D676A);
       line-height: 1.55;
       margin: 0 0 8px 0;
     }
@@ -179,26 +179,26 @@
     /* Rule Number Cards */
     .rule-number-card {
       background: #ffffff;
-      border: 1px solid rgba(76, 175, 80, 0.15);
+      border: 1px solid rgba(128, 0, 32, 0.14);
       border-radius: 16px;
       padding: 22px;
       height: 100%;
-      box-shadow: 0 4px 16px rgba(46, 125, 50, 0.05);
+      box-shadow: 0 4px 16px rgba(59, 4, 13, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .rule-number-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(46, 125, 50, 0.12);
-      border-color: rgba(76, 175, 80, 0.3);
+      box-shadow: 0 12px 30px rgba(128, 0, 32, 0.12);
+      border-color: rgba(212, 175, 55, 0.4);
     }
 
     .rule-number-badge {
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: #E8F5E9;
-      color: #2E7D32;
+      background: var(--soft-maroon-bg, #FDF2F4);
+      color: var(--primary-maroon, #800020);
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
       font-size: 1.15rem;
@@ -212,35 +212,35 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 700;
       font-size: 1rem;
-      color: var(--text-dark, #1A2E1D);
+      color: var(--text-dark, #2A0A10);
       margin-bottom: 6px;
     }
 
     .rule-desc {
       font-size: 0.85rem;
-      color: var(--text-muted, #6C757D);
+      color: var(--text-muted, #7D676A);
       line-height: 1.55;
       margin: 0;
     }
 
     /* Call to Action Banner */
     .cta-banner-v2 {
-      background: linear-gradient(135deg, #1B3B2B 0%, #2E7D32 100%);
+      background: linear-gradient(135deg, var(--dark-maroon, #580B17) 0%, var(--primary-maroon, #800020) 100%);
       border-radius: 24px;
       padding: 50px 24px;
       color: #ffffff;
       text-align: center;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 16px 40px rgba(27, 59, 43, 0.2);
+      box-shadow: 0 16px 40px rgba(59, 4, 13, 0.2);
     }
 
     .cta-banner-icon {
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: #4CAF50;
-      color: #ffffff;
+      background: var(--accent-gold, #D4AF37);
+      color: var(--dark-maroon, #580B17);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -252,9 +252,9 @@
 
     /* Filter Pills & Search Input Bar */
     .fas-nav-pill {
-      border: 1px solid rgba(76, 175, 80, 0.25);
+      border: 1px solid rgba(128, 0, 32, 0.2);
       background: #ffffff;
-      color: var(--text-dark, #1A2E1D);
+      color: var(--text-dark, #2A0A10);
       font-size: 0.88rem;
       font-weight: 600;
       padding: 8px 18px;
@@ -264,10 +264,10 @@
       cursor: pointer;
     }
     .fas-nav-pill:hover, .fas-nav-pill.active {
-      background: #2E7D32;
+      background: var(--primary-maroon, #800020);
       color: #ffffff;
-      border-color: #2E7D32;
-      box-shadow: 0 4px 14px rgba(46, 125, 50, 0.25);
+      border-color: var(--accent-gold, #D4AF37);
+      box-shadow: 0 4px 14px rgba(128, 0, 32, 0.25);
     }
 
     .fas-dir-search {
@@ -278,14 +278,14 @@
       width: 100%;
       padding: 9px 16px 9px 38px;
       border-radius: 50px;
-      border: 1px solid rgba(76, 175, 80, 0.25);
+      border: 1px solid rgba(128, 0, 32, 0.2);
       font-size: 0.88rem;
       outline: none;
       transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .fas-dir-search input:focus {
-      border-color: #4CAF50;
-      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.18);
+      border-color: var(--primary-maroon, #800020);
+      box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.15);
     }
     .fas-dir-search i {
       position: absolute;
@@ -313,7 +313,20 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="/">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="paket.html">Paket Outbound</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="paket.html" id="desktopPaketDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paket Outbound
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="desktopPaketDropdown">
+              <li><a class="dropdown-item py-2 fw-semibold text-warning" href="paket.html"><i class="fa-solid fa-boxes-packing me-2"></i>Semua Paket Outbound</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2" href="Outbound-Team-Building-Corporate-Malang.html">Corporate Team Building</a></li>
+              <li><a class="dropdown-item py-2" href="Fun-Outbound-Malang.html">Fun Outbound Games</a></li>
+              <li><a class="dropdown-item py-2" href="Outbound-Sekolah-dan-Mahasiswa-Malang.html">Outbound Sekolah &amp; Mahasiswa</a></li>
+              <li><a class="dropdown-item py-2" href="Paintball-Full-Combat-Malang.html">Paintball Combat</a></li>
+              <li><a class="dropdown-item py-2" href="Rafting-Arung-Jeram-Malang.html">Rafting &amp; Adventure</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link active" href="fasilitas.html">Fasilitas</a></li>
           <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
           <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
@@ -357,25 +370,25 @@
         <div class="col-lg-6" data-reveal>
           <div class="row g-3 text-center">
             <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--bg-softer, #F4FAF2);border:1px solid rgba(76,175,80,0.14);">
+              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
                 <div class="fw-bold text-success" style="font-size:1.55rem;font-family:'Outfit',sans-serif;">20+</div>
                 <div class="text-muted" style="font-size:0.78rem;">Jenis Fasilitas</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--bg-softer, #F4FAF2);border:1px solid rgba(76,175,80,0.14);">
+              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
                 <div class="fw-bold text-success" style="font-size:1.55rem;font-family:'Outfit',sans-serif;">1.140 Ha</div>
                 <div class="text-muted" style="font-size:0.78rem;">Area Kebun Teh</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--bg-softer, #F4FAF2);border:1px solid rgba(76,175,80,0.14);">
+              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
                 <div class="fw-bold text-success" style="font-size:1.55rem;font-family:'Outfit',sans-serif;">300+</div>
                 <div class="text-muted" style="font-size:0.78rem;">Seat Resto</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--bg-softer, #F4FAF2);border:1px solid rgba(76,175,80,0.14);">
+              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
                 <div class="fw-bold text-success" style="font-size:1.55rem;font-family:'Outfit',sans-serif;">24 Jam</div>
                 <div class="text-muted" style="font-size:0.78rem;">Keamanan Area</div>
               </div>
@@ -1005,7 +1018,7 @@
     </a>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer (Consistent Brand Theme) -->
   <footer class="footer-custom">
     <div class="container">
       <div class="row g-4">
@@ -1014,7 +1027,7 @@
             <i class="fa-solid fa-leaf"></i>
             <span>OUTBOUND INDONESIA</span>
           </div>
-          <p class="text-white-50 mb-3" style="font-size:0.9rem;line-height:1.7;">
+          <p class="text-white-50 mb-3" style="font-size: 0.9rem; line-height: 1.7;">
             Penyelenggara paket outbound, team building, rafting, paintball, dan gathering terpercaya di Malang, Batu, Kebun Teh Wonosari, dan kota-kota utama di seluruh Indonesia.
           </p>
           <div class="social-links">
@@ -1024,16 +1037,22 @@
             <a href="#"><i class="fa-brands fa-tiktok"></i></a>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-6">
           <h5>Navigasi</h5>
           <ul class="footer-links">
             <li><a href="/"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Beranda</a></li>
-            <li><a href="tentang.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Tentang Kami</a></li>
-            <li><a href="paket.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Paket Outbound</a></li>
-            <li><a href="fasilitas.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Fasilitas</a></li>
-            <li><a href="artikel.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Artikel &amp; Tips</a></li>
+            <li><a href="tentang.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Tentang Kami</a>
+            </li>
+            <li><a href="paket.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Paket Outbound</a>
+            </li>
+            <li><a href="fasilitas.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Fasilitas</a>
+            </li>
+            <li><a href="artikel.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Artikel &amp;
+                Tips</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-6">
           <h5>Paket Populer</h5>
           <ul class="footer-links">
@@ -1044,9 +1063,10 @@
             <li><a href="Corporate-Gathering-Malang.html"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Corporate Gathering</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-6">
           <h5>Kontak &amp; Lokasi</h5>
-          <ul class="footer-links text-white-50" style="font-size:0.9rem;">
+          <ul class="footer-links text-white-50" style="font-size: 0.9rem;">
             <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-location-dot text-warning mt-1"></i> Kebun Teh Wonosari, Lawang, Malang, Jawa Timur</li>
             <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-phone text-warning mt-1"></i> +62 812-3456-7890</li>
             <li class="mb-2 d-flex gap-2"><i class="fa-brands fa-whatsapp text-warning mt-1"></i> 0812-3456-7890</li>
@@ -1054,8 +1074,11 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom text-center">
-        <p class="m-0 text-white-50">&copy; 2026 Outbound Indonesia. All Rights Reserved. Built for Professional Outbound Experience.</p>
+        <p class="m-0 text-white-50">
+          &copy; 2026 Outbound Indonesia. All Rights Reserved. Built for Professional Outbound Experience.
+        </p>
       </div>
     </div>
   </footer>

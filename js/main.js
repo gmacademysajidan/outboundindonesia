@@ -16,13 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentY = window.scrollY;
 
         if (navbar) {
-          // Hide when scrolling down, show when scrolling up
-          if (currentY > lastScrollY && currentY > 100) {
-            navbar.style.transform = 'translateY(-100%)';
-          } else {
-            navbar.style.transform = 'translateY(0)';
-          }
-
+          // Always visible at top (Sticky Navbar)
+          navbar.style.transform = 'none';
           if (currentY > 50) {
             navbar.style.boxShadow = '0 4px 28px rgba(42, 4, 10, 0.55)';
           } else {
@@ -45,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ========================================================
-     1b. MOBILE SIDE DRAWER (SLIDE IN FROM RIGHT)
+     1b. MOBILE SIDE DRAWER HANDLER
      ======================================================== */
   const navbarCollapse = document.getElementById('navbarContent');
   const navbarToggler = document.querySelector('.navbar-toggler');
@@ -63,32 +58,23 @@ document.addEventListener('DOMContentLoaded', function () {
       if (icon) icon.className = 'fa-solid fa-bars';
     });
 
-    // Close menu on backdrop click
+    // Close drawer when tapping outside drawer and outside toggler
     document.addEventListener('click', function (e) {
-      if (
-        document.body.classList.contains('mobile-menu-open') &&
-        !navbarCollapse.contains(e.target) &&
-        !navbarToggler.contains(e.target)
-      ) {
+      if (!document.body.classList.contains('mobile-menu-open')) return;
+
+      const isInsideDrawer = e.target.closest('#navbarContent');
+      const isToggler = e.target.closest('.navbar-toggler');
+
+      if (!isInsideDrawer && !isToggler) {
         if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
-          bsCollapse.hide();
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) bsCollapse.hide();
         }
       }
     });
-
-    // Close menu when clicking nav link
-    navbarCollapse.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        if (document.body.classList.contains('mobile-menu-open')) {
-          if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-            if (bsCollapse) bsCollapse.hide();
-          }
-        }
-      });
-    });
   }
+
+
 
   /* ========================================================
      2. BACK TO TOP

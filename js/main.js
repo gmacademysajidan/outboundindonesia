@@ -64,14 +64,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const isInsideDrawer = e.target.closest('#navbarContent');
       const isToggler = e.target.closest('.navbar-toggler');
+      const isCloseBtn = e.target.closest('#navbarCloseBtn');
 
-      if (!isInsideDrawer && !isToggler) {
+      if (!isInsideDrawer && !isToggler && !isCloseBtn) {
         if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
           const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
           if (bsCollapse) bsCollapse.hide();
         }
       }
     });
+
+    // ── Tombol close (✕) di pojok kanan atas menu mobile ──
+    const navbarCloseBtn = document.getElementById('navbarCloseBtn');
+    if (navbarCloseBtn) {
+      navbarCloseBtn.addEventListener('click', function () {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
+                          || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+      });
+    }
   }
 
 

@@ -324,6 +324,45 @@ nav.navbar-custom .navbar-brand .brand-sub {
   outline: none !important;
 }
 
+/* ── Mobile Menu Close Button (✕) ── */
+.navbar-close-btn {
+  display: none;          /* tersembunyi secara default */
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(128, 0, 32, 0.10);
+  border: 1.5px solid rgba(128, 0, 32, 0.28);
+  border-radius: 50%;
+  color: var(--dark-maroon);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.22s ease, transform 0.25s ease, color 0.22s ease;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Muncul hanya di mobile saat menu sedang terbuka */
+@media (max-width: 991.98px) {
+  body.mobile-menu-open .navbar-close-btn {
+    display: flex;
+  }
+}
+
+.navbar-close-btn:hover {
+  background: var(--primary-maroon);
+  border-color: var(--primary-maroon);
+  color: #fff;
+  transform: rotate(90deg) scale(1.12);
+}
+
+.navbar-close-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(128, 0, 32, 0.22);
+}
+
 /* Container inside navbar — locked alignment */
 .navbar-custom .container {
   align-items: center !important;
@@ -2260,29 +2299,13 @@ nav.navbar-custom .navbar-brand .brand-sub {
     transform: scale(0.97) !important;
   }
 
-  /* Dark backdrop overlay when drawer is open (visual only, pointer-events: none) */
+  /* Remove screen darkening backdrop when drawer is open */
   body.mobile-menu-open::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1070;
-    pointer-events: none !important;
-    animation: drawerBackdropFadeIn 0.25s ease forwards;
-  }
-
-  @keyframes drawerBackdropFadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
+    display: none !important;
   }
 
   body.mobile-menu-open {
-    overflow: hidden;
+    overflow: auto;
   }
 }
 

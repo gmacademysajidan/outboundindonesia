@@ -235,6 +235,10 @@
       box-shadow: 0 16px 40px rgba(59, 4, 13, 0.2);
     }
 
+    .cta-banner-v2 h2 {
+      color: #ffffff;
+    }
+
     .cta-banner-icon {
       width: 64px;
       height: 64px;
@@ -251,23 +255,62 @@
     }
 
     /* Filter Pills & Search Input Bar */
+    .fas-pills-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .fas-nav-pill {
       border: 1px solid rgba(128, 0, 32, 0.2);
       background: #ffffff;
       color: var(--text-dark, #2A0A10);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
-      padding: 8px 18px;
+      padding: 0 16px;
+      min-width: 190px;
+      height: 44px;
       border-radius: 50px;
       transition: all 0.25s ease;
       white-space: nowrap;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      flex: 1 1 0px;
     }
     .fas-nav-pill:hover, .fas-nav-pill.active {
       background: var(--primary-maroon, #800020);
       color: #ffffff;
       border-color: var(--accent-gold, #D4AF37);
       box-shadow: 0 4px 14px rgba(128, 0, 32, 0.25);
+    }
+
+    /* Mobile Responsive Filter Pills Layout */
+    @media (max-width: 767.98px) {
+      .fas-pills-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        width: 100% !important;
+      }
+      .fas-nav-pill {
+        width: 100% !important;
+        min-width: unset !important;
+        flex: unset !important;
+        padding: 9px 10px !important;
+        font-size: 0.82rem !important;
+        text-align: center !important;
+        justify-content: center !important;
+        white-space: normal !important;
+        height: auto !important;
+        min-height: 44px !important;
+      }
+      .fas-pills-container .fas-nav-pill:last-child {
+        grid-column: span 2 !important;
+      }
     }
 
     .fas-dir-search {
@@ -371,29 +414,29 @@
           </p>
         </div>
         <div class="col-lg-6" data-reveal>
-          <div class="row g-3 text-center">
-            <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
-                <div class="fw-bold" style="font-size:1.55rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);">10+</div>
-                <div class="text-muted" style="font-size:0.78rem;">Tahun Pengalaman</div>
+          <div class="row g-3 text-center align-items-stretch">
+            <div class="col-6 col-sm-3 d-flex">
+              <div class="p-3 rounded-3 h-100 w-100 d-flex flex-column justify-content-center align-items-center" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
+                <div class="fw-bold" style="font-size:1.5rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);line-height:1.2;">10+</div>
+                <div class="text-muted mt-1" style="font-size:0.8rem;line-height:1.2;">Tahun Pengalaman</div>
               </div>
             </div>
-            <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
-                <div class="fw-bold" style="font-size:1.55rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);">500+</div>
-                <div class="text-muted" style="font-size:0.78rem;">Event Selesai</div>
+            <div class="col-6 col-sm-3 d-flex">
+              <div class="p-3 rounded-3 h-100 w-100 d-flex flex-column justify-content-center align-items-center" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
+                <div class="fw-bold" style="font-size:1.5rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);line-height:1.2;">500+</div>
+                <div class="text-muted mt-1" style="font-size:0.8rem;line-height:1.2;">Event Selesai</div>
               </div>
             </div>
-            <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
-                <div class="fw-bold" style="font-size:1.55rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);">50k+</div>
-                <div class="text-muted" style="font-size:0.78rem;">Alumni Peserta</div>
+            <div class="col-6 col-sm-3 d-flex">
+              <div class="p-3 rounded-3 h-100 w-100 d-flex flex-column justify-content-center align-items-center" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
+                <div class="fw-bold" style="font-size:1.5rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);line-height:1.2;">50k+</div>
+                <div class="text-muted mt-1" style="font-size:0.8rem;line-height:1.2;">Alumni Peserta</div>
               </div>
             </div>
-            <div class="col-6 col-sm-3">
-              <div class="p-3 rounded-3" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
-                <div class="fw-bold" style="font-size:1.55rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);">100%</div>
-                <div class="text-muted" style="font-size:0.78rem;">Fasilitator BNSP</div>
+            <div class="col-6 col-sm-3 d-flex">
+              <div class="p-3 rounded-3 h-100 w-100 d-flex flex-column justify-content-center align-items-center" style="background:var(--soft-maroon-bg, #FDF2F4);border:1px solid rgba(128,0,32,0.14);">
+                <div class="fw-bold" style="font-size:1.5rem;font-family:'Outfit',sans-serif;color: var(--primary-maroon, #800020);line-height:1.2;">100%</div>
+                <div class="text-muted mt-1" style="font-size:0.8rem;line-height:1.2;">Fasilitator BNSP</div>
               </div>
             </div>
           </div>
@@ -419,7 +462,7 @@
 
       <!-- Category Filter Pills & Search Bar -->
       <div class="fas-dir-nav-bar mb-5 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3" data-reveal>
-        <div class="d-flex flex-wrap align-items-center gap-2 w-100 w-lg-auto overflow-x-auto pb-1 pb-lg-0" style="scrollbar-width:none;">
+        <div class="fas-pills-container d-flex flex-wrap align-items-center gap-2 w-100 w-lg-auto pb-1 pb-lg-0">
           <button type="button" class="fas-nav-pill active" data-filter="all">
             <i class="fa-solid fa-border-all me-1"></i> Semua Fasilitas
           </button>
@@ -960,7 +1003,7 @@
         <span class="badge mb-3" style="background:rgba(255,193,7,0.2);color:#FFD54F;border:1px solid rgba(255,193,7,0.3);padding:7px 18px;border-radius:50px;font-size:0.82rem;">
           <i class="fa-solid fa-comments me-1"></i> KONSULTASI ACARA GRATIS
         </span>
-        <h2 class="display-6 fw-bold mb-3">Siap Merencanakan Outbound &amp; Wisata Anda?</h2>
+        <h2 class="display-6 fw-bold mb-3 text-white">Siap Merencanakan Outbound &amp; Wisata Anda?</h2>
         <p class="text-white mx-auto mb-4" style="font-size:0.98rem;max-width:640px;opacity:0.9;line-height:1.7;">
           Konsultasikan kebutuhan fasilitas, lokasi lapangan, akomodasi penginapan, serta jadwal acara rombongan Anda langsung dengan customer service kami.
         </p>
@@ -1070,10 +1113,9 @@
         <div class="col-lg-3 col-md-6">
           <h5>Kontak &amp; Lokasi</h5>
           <ul class="footer-links text-white-50" style="font-size: 0.9rem;">
-            <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-location-dot text-warning mt-1"></i> Kebun Teh Wonosari, Lawang, Malang, Jawa Timur</li>
+            <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-location-dot text-warning mt-1"></i> Jl. Raya Darmo No. 45, Tegalsari, Surabaya, Jawa Timur</li>
             <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-phone text-warning mt-1"></i> +62 82211221909</li>
             <li class="mb-2 d-flex gap-2"><i class="fa-brands fa-whatsapp text-warning mt-1"></i> +62 82211221909</li>
-            <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-envelope text-warning mt-1"></i> info@outboundindonesia.com</li>
           </ul>
         </div>
       </div>
@@ -1087,7 +1129,7 @@
   </footer>
 
   <!-- JS Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -610,10 +610,10 @@ body.mobile-offcanvas-open {
 .hero-section {
   position: relative;
   background: linear-gradient(160deg,
-      rgba(35, 2, 8, 0.88) 0%,
-      rgba(59, 4, 13, 0.82) 40%,
-      rgba(88, 11, 23, 0.70) 100%),
-    url('../assets/img/Wonosari_tea_plantation_landscape_202608051845.webp') center 30% / cover no-repeat;
+      rgba(35, 2, 8, 0.82) 0%,
+      rgba(59, 4, 13, 0.75) 40%,
+      rgba(88, 11, 23, 0.65) 100%),
+    url('../assets/img/Corporate_team_gathering_on_lawn.webp') center/cover no-repeat;
   color: #fff;
   padding: 110px 0 90px;
   overflow: hidden;
@@ -3095,4 +3095,33 @@ img {
 /* Font Display Swap */
 @font-face {
   font-display: swap;
+}
+
+/* Responsive Hero Action Buttons for Mobile */
+@media (max-width: 575.98px) {
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* PageSpeed Performance & Rendering Optimizations */
+footer,
+.footer-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
+}
+
+/* Smooth GPU accelerated rendering for sticky & floating elements */
+.navbar-custom,
+.floating-btn,
+.hero-section {
+  transform: translateZ(0);
 }

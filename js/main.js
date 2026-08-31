@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       ticking = true;
     }
-  });
+  }, { passive: true });
 
   /* ========================================================
      1b. MOBILE OFFCANVAS NAVIGATION DRAWER & COLLAPSIBLE DROPDOWN

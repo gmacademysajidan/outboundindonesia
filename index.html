@@ -177,7 +177,7 @@
                 "name": "Di mana lokasi kegiatan Outbound Indonesia?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Lokasi kegiatan Outbound Indonesia meliputi wilayah Malang, Surabaya, Mojokerto, Trawas, Batu, Kebun Teh Wonosari, Coban Rondo, dan berbagai venue outbound pilihan di Jawa Timur."
+                    "text": "Lokasi kegiatan Outbound Indonesia meliputi wilayah Malang, Surabaya, Mojokerto, Trawas, Batu, Pegunungan Malang, Coban Rondo, dan berbagai venue outbound pilihan di Jawa Timur."
                 }
             }
         ]
@@ -336,7 +336,7 @@
     </div>
   </section>
 
-  <!-- 6 Alasan Memilih Outbound Wonosari Section -->
+  <!-- 6 Alasan Memilih Outbound Indonesia Section -->
   <section class="py-5 section-soft section-pattern position-relative overflow-hidden">
     <div class="blur-orb blur-orb-amber" style="width:280px;height:280px;top:30px;left:-60px;position:absolute;"></div>
     <div class="container">
@@ -345,7 +345,7 @@
         <div class="col-lg-8 mx-auto">
           <span class="badge badge-amber text-uppercase mb-2"><i class="fa-solid fa-shield-halved me-1"></i> Keunggulan
             Utama</span>
-          <h2 class="fw-bold text-dark mt-1">6 Alasan Memilih Outbound Wonosari</h2>
+          <h2 class="fw-bold text-dark mt-1">6 Alasan Memilih Outbound Indonesia</h2>
           <p class="text-muted">Mengapa ratusan perusahaan, instansi pemerintah, dan sekolah mempercayakan kegiatan
             outbound mereka di tempat kami.</p>
         </div>
@@ -566,90 +566,169 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-5 text-white" style="background-color: var(--deep-forest);">
-    <div class="container" data-reveal>
-      <div class="text-center mb-5">
+  <section class="py-5 text-white position-relative overflow-hidden" style="background-color: var(--deep-forest);" id="testimonialSection">
+    <div class="blur-orb blur-orb-amber" style="width:300px;height:300px;top:-60px;right:-60px;position:absolute;"></div>
+    <div class="container position-relative" style="z-index:2;" data-reveal>
+      <div class="text-center mb-4 mb-md-5">
         <span class="badge bg-warning text-dark mb-2"><i class="fa-solid fa-star me-1"></i> Testimoni Klien</span>
         <h2 class="fw-bold text-white">Apa Kata Mereka Tentang Kami</h2>
+        <p class="text-white-50 mx-auto mt-2" style="max-width: 620px; font-size: 0.95rem;">
+          Pengalaman nyata dari perusahaan, instansi, sekolah, dan komunitas yang telah mempercayakan kegiatan outbound bersama Outbound Indonesia.
+        </p>
       </div>
 
-      <div class="row g-4">
-        <!-- Testimonial 1 -->
-        <div class="col-md-4">
-          <div
-            class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column">
-            <div class="text-warning mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
-              "Acara corporate gathering perusahaan kami berjalan sukses besar! Lapangan sangat bersih, udaranya sejuk,
-              dan tim instruktur dari Outbound Indonesia sangat profesional dan komunikatif."
-            </p>
-            <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10">
-              <div class="testimonial-avatar-frame">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
-                  alt="Bapak Heru Prasetyo" class="testimonial-avatar-img" loading="lazy" decoding="async">
-                <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+      <!-- Testimonial Slider Wrapper -->
+      <div class="testimonial-slider-wrapper position-relative px-1 px-md-5">
+        <!-- Prev & Next Nav Buttons -->
+        <button class="testimonial-slider-btn testimonial-prev-btn" id="testiPrevBtn" type="button" aria-label="Testimoni Sebelumnya">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="testimonial-slider-btn testimonial-next-btn" id="testiNextBtn" type="button" aria-label="Testimoni Selanjutnya">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Slider Container & Track -->
+        <div class="testimonial-slider-container overflow-hidden" id="testiContainer">
+          <div class="testimonial-slider-track d-flex" id="testiTrack">
+            
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide-item">
+              <div class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column testimonial-card-hover">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge bg-warning bg-opacity-20 text-warning border border-warning border-opacity-25 rounded-pill" style="font-size: 0.72rem;">Corporate</span>
+                </div>
+                <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
+                  "Acara corporate gathering perusahaan kami berjalan sukses besar! Lapangan sangat bersih, udaranya sejuk, dan tim instruktur dari Outbound Indonesia sangat profesional dan komunikatif."
+                </p>
+                <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10 mt-2">
+                  <div class="testimonial-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                      alt="Bapak Heru Prasetyo" class="testimonial-avatar-img" loading="lazy" decoding="async">
+                    <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-white m-0">Bapak Heru Prasetyo</h6>
+                    <small class="text-white-50">HRD PT. Surya Mandiri Surabaya</small>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h6 class="fw-bold text-white m-0">Bapak Heru Prasetyo</h6>
-                <small class="text-white-50">HRD PT. Surya Mandiri Surabaya</small>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide-item">
+              <div class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column testimonial-card-hover">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge bg-success bg-opacity-20 text-white border border-success border-opacity-25 rounded-pill" style="font-size: 0.72rem;">Sekolah</span>
+                </div>
+                <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
+                  "Anak-anak murid SD sangat senang mengikuti paket edutainment dari Outbound Indonesia. Tempatnya aman, wahana flying fox seru, dan fasilitas sangat memadai."
+                </p>
+                <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10 mt-2">
+                  <div class="testimonial-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"
+                      alt="Ibu Nurul Hidayah" class="testimonial-avatar-img" loading="lazy" decoding="async">
+                    <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-white m-0">Ibu Nurul Hidayah</h6>
+                    <small class="text-white-50">Kepala Sekolah SD Al-Azhar Malang</small>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide-item">
+              <div class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column testimonial-card-hover">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge bg-info bg-opacity-20 text-white border border-info border-opacity-25 rounded-pill" style="font-size: 0.72rem;">Family Gathering</span>
+                </div>
+                <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
+                  "Acara family gathering keluarga besar berjalan sangat hangat dan meriah bersama Outbound Indonesia. Program fun games interaktif dan pelayanan timnya luar biasa!"
+                </p>
+                <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10 mt-2">
+                  <div class="testimonial-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                      alt="Bapak Sastro Wardoyo" class="testimonial-avatar-img" loading="lazy" decoding="async">
+                    <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-white m-0">Bapak Sastro Wardoyo</h6>
+                    <small class="text-white-50">Peserta Family Gathering Kediri</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide-item">
+              <div class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column testimonial-card-hover">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge bg-warning bg-opacity-20 text-warning border border-warning border-opacity-25 rounded-pill" style="font-size: 0.72rem;">Team Building</span>
+                </div>
+                <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
+                  "Pengalaman outbound training yang luar biasa di Mojokerto! Instruktur bersertifikat BNSP berhasil menyajikan simulasi kepemimpinan dan kekompakan tim secara efektif dan berkesan."
+                </p>
+                <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10 mt-2">
+                  <div class="testimonial-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+                      alt="Dra. Rina Kusumawati" class="testimonial-avatar-img" loading="lazy" decoding="async">
+                    <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-white m-0">Dra. Rina Kusumawati</h6>
+                    <small class="text-white-50">GM PT. Nusantara Prima Mojokerto</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-slide-item">
+              <div class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column testimonial-card-hover">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="text-warning">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge bg-primary bg-opacity-20 text-white border border-primary border-opacity-25 rounded-pill" style="font-size: 0.72rem;">Mahasiswa</span>
+                </div>
+                <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
+                  "Paket outbound mahasiswa sangat memuaskan dan hemat budget. Udara sejuk, arena games luas, dan tim fasilitator sangat ramah membimbing seluruh rangkaian acara dari awal hingga akhir."
+                </p>
+                <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10 mt-2">
+                  <div class="testimonial-avatar-frame">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                      alt="Ahmad Faisal, S.T." class="testimonial-avatar-img" loading="lazy" decoding="async">
+                    <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold text-white m-0">Ahmad Faisal, S.T.</h6>
+                    <small class="text-white-50">Ketua Panitia Outbound Kampus Surabaya</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="col-md-4">
-          <div
-            class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column">
-            <div class="text-warning mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
-              "Anak-anak murid SD sangat senang mengikuti paket edutainment dari Outbound Indonesia. Tempatnya aman,
-              wahana flying fox seru, dan fasilitas sangat memadai."
-            </p>
-            <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10">
-              <div class="testimonial-avatar-frame">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80"
-                  alt="Ibu Nurul Hidayah" class="testimonial-avatar-img" loading="lazy" decoding="async">
-                <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
-              </div>
-              <div>
-                <h6 class="fw-bold text-white m-0">Ibu Nurul Hidayah</h6>
-                <small class="text-white-50">Kepala Sekolah SD Al-Azhar Malang</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="col-md-4">
-          <div
-            class="p-4 rounded-4 bg-white bg-opacity-10 border border-white border-opacity-10 h-100 d-flex flex-column">
-            <div class="text-warning mb-3">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-white-50 flex-grow-1" style="font-size: 0.93rem; line-height: 1.7;">
-              "Acara family gathering keluarga besar berjalan sangat hangat dan meriah bersama Outbound Indonesia.
-              Program fun games interaktif dan pelayanan timnya luar biasa!"
-            </p>
-            <div class="d-flex align-items-center gap-3 pt-3 border-top border-white border-opacity-10">
-              <div class="testimonial-avatar-frame">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
-                  alt="Bapak Sastro Wardoyo" class="testimonial-avatar-img" loading="lazy" decoding="async">
-                <span class="testimonial-verified-check"><i class="fa-solid fa-check"></i></span>
-              </div>
-              <div>
-                <h6 class="fw-bold text-white m-0">Bapak Sastro Wardoyo</h6>
-                <small class="text-white-50">Peserta Family Gathering Kediri</small>
-              </div>
-            </div>
-          </div>
+        <!-- Indicator Dots -->
+        <div class="testimonial-slider-dots d-flex justify-content-center align-items-center gap-2 mt-4" id="testiDots">
+          <button class="testi-dot active" type="button" data-slide="0" aria-label="Slide 1"></button>
+          <button class="testi-dot" type="button" data-slide="1" aria-label="Slide 2"></button>
+          <button class="testi-dot" type="button" data-slide="2" aria-label="Slide 3"></button>
         </div>
       </div>
 
@@ -695,8 +774,8 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted" style="line-height: 1.7;">
-                  Ya! Seluruh paket outbound kami bersifat *all-in* yang mencakup tiket masuk kawasan Kebun Teh
-                  Wonosari, konsumsi makan siang prasmanan, coffee break, sound system, dan peralatan game.
+                  Ya! Seluruh paket outbound kami bersifat *all-in* yang mencakup tiket masuk kawasan wisata,
+                  konsumsi makan siang prasmanan, coffee break, sound system, dan peralatan game.
                 </div>
               </div>
             </div>
@@ -736,7 +815,7 @@
           </h2>
           <p class="lead text-white-50 mb-0" style="font-size: 1.05rem; line-height: 1.7;">
             Dapatkan penawaran harga khusus, pemesanan tanggal favorit, serta konsultasi gratis mengenai konsep program
-            outbound yang sesuai dengan kebutuhan tim Anda di Kebun Teh Wonosari Lawang.
+            outbound yang sesuai dengan kebutuhan tim Anda di Malang Jawa Timur.
           </p>
         </div>
         <div class="col-lg-4 text-lg-end">
@@ -747,7 +826,7 @@
               <i class="fa-brands fa-whatsapp me-2 fs-5"></i> Hubungi Tim Marketing
             </a>
             <a href="paket.html" class="btn btn-outline-light px-4 py-3 fw-semibold rounded-pill">
-              <i class="fa-solid fa-list-check me-2"></i> Lihat Semua 6 Paket
+              <i class="fa-solid fa-list-check me-2"></i> Lihat Semua Paket
             </a>
           </div>
         </div>
@@ -783,12 +862,12 @@
               <h5 class="fw-bold text-dark">Fasilitas &amp; Keuntungan Yang Didapat:</h5>
               <ul class="facility-list mt-3">
                 <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Kawasan Outbound Indonesia</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Lapangan Grass Area Privat Kebun Teh</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Lapangan Grass Area Privat Outbound</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Facilitator &amp; Master Game Certificated
                   BNSP</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Sound System Outdoor &amp; Equipment</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Ice Breaking &amp; Team Building Dynamics</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> 1x Makan Siang Prasmanan Khas Wonosari</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> 1x Makan Siang Prasmanan Khas Malang</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> 1x Coffee Break &amp; Snack Kebun</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Banner Welcome Event Size 3x1m</li>
               </ul>
@@ -830,10 +909,10 @@
             <div class="col-md-7">
               <h5 class="fw-bold text-dark">Fasilitas &amp; Keuntungan Yang Didapat:</h5>
               <ul class="facility-list mt-3">
-                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Kebun Teh &amp; Kolam Renang</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Kawasan &amp; Kolam Renang</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Pemandu Edukasi Ramah Anak</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Edukasi Pemetikan Teh Langsung</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Kunjungan Pabrik Teh PTPN (Tea Factory Tour)
+                <li><i class="fa-solid fa-circle-check text-success"></i> Edukasi Alam &amp; Plantasi</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Kunjungan Edukasi Industri (Factory Tour)
                 </li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Fun Outbound Games Motorik</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Wahana Flying Fox Anak 1x Meluncur</li>
@@ -877,12 +956,12 @@
             <div class="col-md-7">
               <h5 class="fw-bold text-dark">Fasilitas &amp; Keuntungan Yang Didapat:</h5>
               <ul class="facility-list mt-3">
-                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Kebun Teh &amp; Saung Kumpul</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Kawasan &amp; Saung Kumpul</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Fun Family Games Interaktif</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Pemandu Lapangan &amp; MC Fun Event</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Akses Kereta Kelinci Kebun Teh</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Akses Kereta Wisata Pegunungan</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> 1x Makan Siang Buffet Keluarga</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> 1x Snack Kebun &amp; Teh Hangat</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> 1x Snack &amp; Minuman Warm Herbal Tea</li>
               </ul>
             </div>
           </div>
@@ -921,10 +1000,10 @@
             <div class="col-md-7">
               <h5 class="fw-bold text-dark">Fasilitas &amp; Keuntungan Yang Didapat:</h5>
               <ul class="facility-list mt-3">
-                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Area Kebun Teh Wonosari</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Tiket Masuk Area Outbound Malang</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> 50 Peluru Paintball War / Peserta</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Masker Goggle, Seragam &amp; Body Vest</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Flying Fox Lintasan 150m di Kebun Teh</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Flying Fox Lintasan 150m di Area Asri</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Safety Marshal &amp; Wasit Profesional</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> 1x Makan Siang Prasmanan</li>
               </ul>
@@ -972,7 +1051,7 @@
                 <li><i class="fa-solid fa-circle-check text-success"></i> Malam Keakraban Api Unggun &amp; Barbeque</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> 3x Makan (Malam, Pagi, Siang) + 2x Coffee
                   Break</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Morning Tea Walk &amp; Senam Kebun</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Morning Fun Trekking &amp; Senam Pegunungan</li>
               </ul>
             </div>
           </div>
@@ -1016,7 +1095,7 @@
                 </li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Ruang Meeting Eksklusif + Sound System</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Outbound Leadership oleh Master Trainer</li>
-                <li><i class="fa-solid fa-circle-check text-success"></i> Offroad Jeep Kebun Teh Puncak Wonosari</li>
+                <li><i class="fa-solid fa-circle-check text-success"></i> Offroad Jeep Mountain Adventure Malang</li>
                 <li><i class="fa-solid fa-circle-check text-success"></i> Gala Dinner &amp; Live Acoustic Music</li>
               </ul>
             </div>

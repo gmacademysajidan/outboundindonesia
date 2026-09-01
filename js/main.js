@@ -1,4 +1,4 @@
-// Wisata Agro Wonosari – Main JS v3.0 Premium
+// Outbound Indonesia – Main JS v3.0 Premium
 // Handles: Smart Navbar, Back-To-Top, Scroll Reveal, Counter Animation, Article Search
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </ul>
 
           <div class="mobile-offcanvas-footer mt-auto pt-4">
-            <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20tanya%20paket%20outbound"
+            <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20tanya%20paket%20outbound"
               target="_blank" class="btn btn-amber w-100 py-3 text-dark fw-bold rounded-3 shadow d-flex align-items-center justify-content-center gap-2">
               <i class="fa-brands fa-whatsapp fs-5"></i> Reservasi WhatsApp
             </a>
@@ -477,9 +477,162 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const waBtn = document.getElementById('modalFasWaBtn');
       if (waBtn) {
-        waBtn.href = `https://wa.me/6282211221909?text=Halo%20Admin%20Wisata%20Agro%20Wonosari,%20saya%20ingin%20konsultasi%20ketersediaan%20fasilitas%20${encodeURIComponent(title)}`;
+        waBtn.href = `https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20ketersediaan%20fasilitas%20${encodeURIComponent(title)}`;
       }
     });
   }
+
+  /* ========================================================
+     10. HIGH-PERFORMANCE TESTIMONIAL SLIDER & CAROUSEL
+     ======================================================== */
+  function initTestimonialSlider() {
+    const track = document.getElementById('testiTrack');
+    const container = document.getElementById('testiContainer');
+    const prevBtn = document.getElementById('testiPrevBtn');
+    const nextBtn = document.getElementById('testiNextBtn');
+    const dotsContainer = document.getElementById('testiDots');
+
+    if (!track || !container) return;
+
+    const slides = track.querySelectorAll('.testimonial-slide-item');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function getItemsPerPage() {
+      const w = window.innerWidth;
+      if (w >= 992) return 3;
+      if (w >= 768) return 2;
+      return 1;
+    }
+
+    function getMaxIndex() {
+      const itemsPerPage = getItemsPerPage();
+      return Math.max(0, totalSlides - itemsPerPage);
+    }
+
+    function updateSlider(animate = true) {
+      const itemsPerPage = getItemsPerPage();
+      const maxIndex = getMaxIndex();
+
+      if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+      }
+
+      if (!animate) {
+        track.style.transition = 'none';
+      } else {
+        track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
+      }
+
+      const percentStep = 100 / itemsPerPage;
+      const translateX = -(currentIndex * percentStep);
+      track.style.transform = `translate3d(${translateX}%, 0, 0)`;
+
+      // Update dots
+      if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('.testi-dot');
+        const activeDotIndex = Math.min(currentIndex, dots.length - 1);
+        dots.forEach((dot, idx) => {
+          if (idx === activeDotIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    function goToNext() {
+      const maxIndex = getMaxIndex();
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlider();
+    }
+
+    function goToPrev() {
+      const maxIndex = getMaxIndex();
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = maxIndex;
+      }
+      updateSlider();
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { goToNext(); resetAutoPlay(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { goToPrev(); resetAutoPlay(); });
+
+    if (dotsContainer) {
+      dotsContainer.querySelectorAll('.testi-dot').forEach(dot => {
+        dot.addEventListener('click', function () {
+          const slideIdx = parseInt(this.getAttribute('data-slide'));
+          if (!isNaN(slideIdx)) {
+            const maxIndex = getMaxIndex();
+            currentIndex = Math.min(slideIdx, maxIndex);
+            updateSlider();
+            resetAutoPlay();
+          }
+        });
+      });
+    }
+
+    // Touch Swipe Support for Mobile Devices
+    container.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    container.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 40;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        goToNext();
+        resetAutoPlay();
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        goToPrev();
+        resetAutoPlay();
+      }
+    }
+
+    // Auto Play Interval
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(goToNext, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+    }
+
+    function resetAutoPlay() {
+      startAutoPlay();
+    }
+
+    container.addEventListener('mouseenter', stopAutoPlay);
+    container.addEventListener('mouseleave', startAutoPlay);
+
+    let resizeDebounce;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeDebounce);
+      resizeDebounce = setTimeout(() => {
+        updateSlider(false);
+      }, 100);
+    });
+
+    // Initialize
+    updateSlider(false);
+    startAutoPlay();
+  }
+
+  initTestimonialSlider();
 
 });

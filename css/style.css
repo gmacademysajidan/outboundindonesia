@@ -614,7 +614,7 @@ body.mobile-offcanvas-open {
       rgba(35, 2, 8, 0.82) 0%,
       rgba(59, 4, 13, 0.75) 40%,
       rgba(88, 11, 23, 0.65) 100%),
-    url('../assets/img/Corporate_team_gathering_on_lawn.webp') center/cover no-repeat;
+    url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center/cover no-repeat;
   color: #fff;
   padding: 110px 0 90px;
   overflow: hidden;
@@ -625,25 +625,12 @@ body.mobile-offcanvas-open {
 
 /* Sunlight glow effect */
 .hero-section::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.10) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 /* Subtle botanical leaf pattern */
 .hero-section::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cellipse cx='40' cy='40' rx='28' ry='12' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1.5'/%3E%3Cellipse cx='40' cy='40' rx='28' ry='12' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1' transform='rotate(45 40 40)'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 /* Soft bottom fade into next section */
@@ -834,7 +821,7 @@ body.mobile-offcanvas-open {
   position: relative;
   background:
     linear-gradient(135deg, rgba(55, 4, 12, 0.82) 0%, rgba(100, 8, 24, 0.76) 50%, rgba(28, 2, 6, 0.86) 100%),
-    url('../assets/img/Corporate_team_gathering_on_lawn.webp') center / cover no-repeat;
+    url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center / cover no-repeat;
   color: #fff;
   padding: 75px 0 65px;
   text-align: center;
@@ -1907,7 +1894,7 @@ body.mobile-offcanvas-open {
 .fas-dir-hero {
   position: relative;
   background: linear-gradient(160deg, rgba(35, 2, 8, 0.88) 0%, rgba(59, 4, 13, 0.82) 50%, rgba(88, 11, 23, 0.75) 100%),
-    url('../assets/img/Wonosari_tea_plantation_landscape_202608051845.webp') center 35% / cover no-repeat;
+    url('../assets/img/wisatawan_kebun_teh_outboundindonesia.webp') center 35% / cover no-repeat;
   color: #ffffff;
   padding: 85px 0 65px;
   text-align: center;
@@ -3122,7 +3109,7 @@ div.my-4.p-3.border-start.border-4:hover {
 /* Dark Royal Maroon Hero Header for Package Detail Pages */
 .package-hero-header {
   background: linear-gradient(135deg, rgba(35, 2, 8, 0.96) 0%, rgba(88, 11, 23, 0.92) 100%),
-              url('../assets/img/Corporate_team_gathering_on_lawn.webp') center/cover no-repeat !important;
+              url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center/cover no-repeat !important;
   padding: 45px 0 40px !important;
   color: #ffffff !important;
   position: relative;
@@ -3141,11 +3128,18 @@ div.my-4.p-3.border-start.border-4:hover {
 }
 
 .package-hero-header .breadcrumb-item a {
-  color: var(--accent-gold, #D4AF37) !important;
+  color: #ffffff !important;
 }
 
 .package-hero-header .breadcrumb-item.active {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--accent-gold, #D4AF37) !important;
+  font-weight: 600;
+}
+
+/* Breadcrumb Global Separator Styling */
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--accent-gold, #D4AF37) !important;
+  content: "/" !important;
 }
 
 .package-hero-header .btn-outline-success {

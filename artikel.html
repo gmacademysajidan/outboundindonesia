@@ -138,8 +138,8 @@
     }
   </style>
   <!-- Favicon -->
-  <link rel="icon" type="image/webp" href="assets/img/favicon.webp" />
-  <link rel="shortcut icon" type="image/webp" href="assets/img/favicon.webp" />
+  <link rel="icon" type="image/webp" href="assets/img/favicon-removebg-preview.webp" />
+  <link rel="shortcut icon" type="image/webp" href="assets/img/favicon-removebg-preview.webp" />
 </head>
 
 <body>
@@ -221,7 +221,7 @@
       <div class="row align-items-center bg-light rounded-4 overflow-hidden border shadow-sm g-0">
         <div class="col-lg-6">
           <!-- Ganti src foto ini sesuai kebutuhan -->
-          <img src="assets/img/Flying_fox_zip_line_activity.webp" alt="Tips di Outbound Indonesia"
+          <img src="assets/img/flying_fox_outboundindonesia.webp" alt="Tips di Outbound Indonesia"
             class="featured-banner-img">
         </div>
         <div class="col-lg-6 p-4 p-md-5">
@@ -251,7 +251,6 @@
     <div class="container" style="position:relative;z-index:1">
       <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
         <h3 class="fw-bold text-dark mb-0"><i class="fa-solid fa-book-open text-success me-2"></i> Semua Artikel</h3>
-        <span class="text-muted" id="articleCount" style="font-size: 0.9rem;"></span>
       </div>
 
       <div class="row g-4" id="articleGrid">
@@ -260,7 +259,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="panduan wisata">
           <div class="custom-card h-100">
             <!-- Ganti src foto ini sesuai kebutuhan -->
-            <img src="assets/img/Flying_fox_zip_line_activity.webp" class="article-card-img"
+            <img src="assets/img/flying_fox_outboundindonesia.webp" class="article-card-img"
               alt="Tips ketika di wisata">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-lightbulb"></i>
@@ -285,7 +284,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="perusahaan">
           <div class="custom-card h-100">
             <!-- Ganti src foto ini sesuai kebutuhan -->
-            <img src="assets/img/Students_playing_games_on_field.webp" class="article-card-img"
+            <img src="assets/img/tim_building_perusahaan_outboundindonesia.webp" class="article-card-img"
               alt="Manfaat Team Building">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-briefcase"></i>
@@ -310,7 +309,7 @@
         <!-- Article Card 3 -->
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="edukasi anak">
           <div class="custom-card h-100">
-            <img src="assets/img/Flying_fox_zip_line_activity.webp" class="article-card-img"
+            <img src="assets/img/siswa_bermain_game_lapangan_outboundindonesia.webp" class="article-card-img"
               alt="Aktivitas Outbound Seru">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-child"></i> Edukasi
@@ -336,7 +335,7 @@
         <!-- Article Card 4 -->
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="outbound malang">
           <div class="custom-card h-100">
-            <img src="assets/img/Students_playing_games_on_field.webp" class="article-card-img"
+            <img src="assets/img/wisatawan_kebun_teh_outboundindonesia.webp" class="article-card-img"
               alt="Tempat Outbound Terpopuler di Malang">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-map-location-dot"></i> Outbound Malang</span>
@@ -359,7 +358,7 @@
         <!-- Article Card 5 -->
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="tips outbound">
           <div class="custom-card h-100">
-            <img src="assets/img/Corporate_team_gathering_on_lawn.webp" class="article-card-img"
+            <img src="assets/img/tenda_camping_matahari_terbit_outboundindonesia.webp" class="article-card-img"
               alt="Persiapan Outbound">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-person-hiking"></i>
@@ -385,7 +384,7 @@
         <!-- Article Card 6 -->
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="outbound malang">
           <div class="custom-card h-100">
-            <img src="assets/img/Corporate_team_building_working.webp" class="article-card-img"
+            <img src="assets/img/tos_tantangan_tim_outboundindonesia.webp" class="article-card-img"
               alt="Panduan Memilih Paket Outbound">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-compass"></i>
@@ -502,12 +501,6 @@
     const categoryBtns = document.querySelectorAll('.category-btn');
     const articleItems = document.querySelectorAll('.article-card-item');
     const noResultsMsg = document.getElementById('noResultsMsg');
-    const articleCount = document.getElementById('articleCount');
-
-    function updateCount() {
-      const visible = document.querySelectorAll('.article-card-item:not([style*="display: none"])').length;
-      articleCount.textContent = `Menampilkan ${visible} Artikel`;
-    }
 
     categoryBtns.forEach(btn => {
       btn.addEventListener('click', function () {
@@ -522,11 +515,8 @@
           if (show) matches++;
         });
         noResultsMsg?.classList.toggle('d-none', matches > 0);
-        updateCount();
       });
     });
-
-    updateCount();
   </script>
 </body>
 

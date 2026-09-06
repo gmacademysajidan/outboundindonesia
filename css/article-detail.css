@@ -537,8 +537,8 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #800020; /* Royal Maroon */
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #800020, #580B17); /* Royal Maroon */
+  color: #FFFFFF !important;
   border: 2px solid #D4AF37; /* Gold Accent */
   display: flex;
   align-items: center;
@@ -558,11 +558,15 @@
 }
 
 .btn-back-to-top:hover {
-  background-color: #D4AF37;
-  color: #3B040D;
-  border-color: #800020;
+  background: linear-gradient(135deg, #580B17, #3B040D);
+  color: #FFFFFF !important;
+  border-color: #D4AF37;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.btn-back-to-top i {
+  color: #FFFFFF !important;
 }
 
 /* Responsive Fixes */

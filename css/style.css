@@ -1497,11 +1497,26 @@ body.mobile-offcanvas-open {
 
 .floating-btn-top,
 .btn-top {
-  background: linear-gradient(135deg, var(--dark-green), var(--deep-forest));
+  background: linear-gradient(135deg, var(--dark-maroon, #580B17), var(--deep-maroon, #3B040D));
+  border: 2px solid var(--accent-gold, #D4AF37);
+  color: #ffffff !important;
   opacity: 0;
   pointer-events: none;
   transform: translateY(16px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-btn-top:hover,
+.btn-top:hover {
+  background: linear-gradient(135deg, var(--primary-maroon, #800020), var(--dark-maroon, #580B17));
+  border-color: var(--accent-gold, #D4AF37);
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.floating-btn-top i,
+.btn-top i {
+  color: #ffffff !important;
 }
 
 .floating-btn-top.show,
@@ -1534,34 +1549,160 @@ body.mobile-offcanvas-open {
 }
 
 /* ──────────────────────────────────────────────────────────
-   14. CTA SECTIONS
+   14. CTA SECTIONS - Modern Luxury Design
    ────────────────────────────────────────────────────────── */
 .cta-premium {
-  background: linear-gradient(135deg, var(--deep-forest) 0%, #4A0713 50%, var(--dark-green) 100%);
+  background: linear-gradient(135deg, rgba(36, 2, 8, 0.88) 0%, rgba(59, 4, 13, 0.82) 40%, rgba(88, 11, 23, 0.78) 100%), url('../assets/img/background.webp') center/cover no-repeat;
   position: relative;
   overflow: hidden;
+  padding: 75px 0;
 }
 
-.cta-premium::before {
-  content: '';
+/* Ambient Glow Orbs */
+.cta-glow-orb {
   position: absolute;
-  top: -80px;
-  right: -80px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cta-glow-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0) 70%);
+  top: -120px;
+  right: -100px;
+  animation: ctaPulse 6s ease-in-out infinite alternate;
+}
+
+.cta-glow-2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(128, 0, 32, 0.4) 0%, rgba(128, 0, 32, 0) 70%);
+  bottom: -100px;
+  left: -80px;
+  animation: ctaPulse 8s ease-in-out infinite alternate-reverse;
+}
+
+.cta-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
   pointer-events: none;
 }
 
-.cta-premium::after {
-  content: '';
-  position: absolute;
-  bottom: -60px;
-  left: -60px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(128, 0, 32, 0.12) 0%, transparent 65%);
-  pointer-events: none;
+@keyframes ctaPulse {
+  0% {
+    transform: scale(0.9) translate(0, 0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.15) translate(15px, -15px);
+    opacity: 0.65;
+  }
+}
+
+/* Glassmorphism Card Container */
+.cta-glass-card {
+  background: linear-gradient(135deg, rgba(88, 11, 23, 0.75) 0%, rgba(59, 4, 13, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.cta-glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.6) !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Modern Pill Badge */
+.badge-cta-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #F9E79F;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Title & Highlight Gradient */
+.cta-title {
+  line-height: 1.25;
+}
+
+.cta-title-highlight {
+  background: linear-gradient(135deg, #FFFFFF 20%, #F9E79F 60%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.cta-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Trust Pills */
+.border-white-10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.cta-trust-pill {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Primary CTA Button (WhatsApp Modern) */
+.btn-cta-primary {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-cta-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+  color: #FFFFFF !important;
+}
+
+/* Secondary CTA Button (Glass Outline) */
+.btn-cta-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 50px;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.btn-cta-secondary:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -3201,6 +3342,21 @@ img {
 .badge-amber {
   background: #C8960C !important;
   color: #ffffff !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  max-width: 100% !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 575.98px) {
+  .badge-amber {
+    font-size: 0.78rem !important;
+    padding: 6px 12px !important;
+    display: inline-block !important;
+    text-align: left !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
 }
 
 /* Font Display Swap */

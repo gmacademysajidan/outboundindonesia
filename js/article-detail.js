@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         backToTopBtn.classList.remove('show');
       }
-    });
+    }, { passive: true });
 
     backToTopBtn.addEventListener('click', function () {
       window.scrollTo({
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    window.addEventListener('scroll', highlightTOC);
+    window.addEventListener('scroll', highlightTOC, { passive: true });
     highlightTOC();
   }
 

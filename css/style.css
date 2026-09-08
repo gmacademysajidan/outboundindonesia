@@ -3,9 +3,16 @@
    Version: 3.0 Premium
    Theme: Royal Maroon & Gold Luxury / Premium Outbound
    ========================================================================== */
+/* Google Fonts loaded via <link> in HTML <head> for zero-waterfall performance */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-display: swap;
+}
 /* ──────────────────────────────────────────────────────────
    1. CSS VARIABLES – Design Tokens
    ────────────────────────────────────────────────────────── */

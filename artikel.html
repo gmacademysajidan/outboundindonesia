@@ -8,9 +8,18 @@
   <meta name="description"
     content="Baca artikel, tips persiapan outbound, edukasi wisata alam, dan panduan kegiatan di Malang Jawa Timur." />
 
+  <!-- Resource Preconnects & Preloads for Performance (PageSpeed LCP & FCP) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" />
+
   <!-- CSS Dependencies -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     /* Search Bar Styling */
@@ -148,7 +157,7 @@
   <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand m-0" href="/">
-        <img src="assets/img/favicon-removebg-preview.webp" alt="Outbound Indonesia Logo" class="navbar-logo">
+        <img src="assets/img/favicon-removebg-preview.webp" alt="Outbound Indonesia Logo" class="navbar-logo" decoding="async" fetchpriority="high">
         <span class="brand-title">OUTBOUND INDONESIA <small class="brand-sub">TEAM BUILDING &amp; ADVENTURE</small></span>
       </a>
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -222,7 +231,7 @@
         <div class="col-lg-6">
           <!-- Ganti src foto ini sesuai kebutuhan -->
           <img src="assets/img/flying_fox_outboundindonesia.webp" alt="Tips di Outbound Indonesia"
-            class="featured-banner-img">
+            class="featured-banner-img" loading="lazy" decoding="async">
         </div>
         <div class="col-lg-6 p-4 p-md-5">
           <span class="badge bg-success mb-2 px-3 py-2"><i class="fa-solid fa-star"></i> Artikel Utama</span>
@@ -260,7 +269,7 @@
           <div class="custom-card h-100">
             <!-- Ganti src foto ini sesuai kebutuhan -->
             <img src="assets/img/flying_fox_outboundindonesia.webp" class="article-card-img"
-              alt="Tips ketika di wisata">
+              alt="Tips ketika di wisata" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-lightbulb"></i>
                 Panduan Wisata</span>
@@ -285,7 +294,7 @@
           <div class="custom-card h-100">
             <!-- Ganti src foto ini sesuai kebutuhan -->
             <img src="assets/img/tim_building_perusahaan_outboundindonesia.webp" class="article-card-img"
-              alt="Manfaat Team Building">
+              alt="Manfaat Team Building" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-briefcase"></i>
                 Perusahaan</span>
@@ -310,7 +319,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="edukasi anak">
           <div class="custom-card h-100">
             <img src="assets/img/siswa_bermain_game_lapangan_outboundindonesia.webp" class="article-card-img"
-              alt="Aktivitas Outbound Seru">
+              alt="Aktivitas Outbound Seru" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-child"></i> Edukasi
                 Anak</span>
@@ -336,7 +345,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="outbound malang">
           <div class="custom-card h-100">
             <img src="assets/img/wisatawan_kebun_teh_outboundindonesia.webp" class="article-card-img"
-              alt="Tempat Outbound Terpopuler di Malang">
+              alt="Tempat Outbound Terpopuler di Malang" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-map-location-dot"></i> Outbound Malang</span>
               <div class="article-meta mb-2">
@@ -359,7 +368,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="tips outbound">
           <div class="custom-card h-100">
             <img src="assets/img/tenda_camping_matahari_terbit_outboundindonesia.webp" class="article-card-img"
-              alt="Persiapan Outbound">
+              alt="Persiapan Outbound" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-person-hiking"></i>
                 Tips Outbound</span>
@@ -385,7 +394,7 @@
         <div class="col-lg-4 col-md-6 article-card-item" data-reveal data-category="outbound malang">
           <div class="custom-card h-100">
             <img src="assets/img/tos_tantangan_tim_outboundindonesia.webp" class="article-card-img"
-              alt="Panduan Memilih Paket Outbound">
+              alt="Panduan Memilih Paket Outbound" loading="lazy" decoding="async">
             <div class="card-body p-4 d-flex flex-column">
               <span class="badge badge-amber mb-2 w-fit-content article-tag"><i class="fa-solid fa-compass"></i>
                 Outbound Malang</span>

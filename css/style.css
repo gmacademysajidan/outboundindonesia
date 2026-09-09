@@ -3224,6 +3224,10 @@ div.my-4.p-3.border-start.border-4:hover {
   text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
+.package-hero-header .badge {
+  color: #ffffff !important;
+}
+
 .package-hero-header p,
 .package-hero-header .text-muted {
   color: rgba(255, 255, 255, 0.88) !important;

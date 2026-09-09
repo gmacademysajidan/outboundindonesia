@@ -623,9 +623,9 @@ body.mobile-offcanvas-open {
       rgba(88, 11, 23, 0.65) 100%),
     url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center/cover no-repeat;
   color: #fff;
-  padding: 110px 0 90px;
+  padding: 55px 0 50px;
   overflow: hidden;
-  min-height: 580px;
+  min-height: 460px;
   display: flex;
   align-items: center;
 }
@@ -826,9 +826,7 @@ body.mobile-offcanvas-open {
 .page-hero,
 .fas-hero-v2 {
   position: relative;
-  background:
-    linear-gradient(135deg, rgba(55, 4, 12, 0.82) 0%, rgba(100, 8, 24, 0.76) 50%, rgba(28, 2, 6, 0.86) 100%),
-    url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center / cover no-repeat;
+  background: #580B17 !important;
   color: #fff;
   padding: 75px 0 65px;
   text-align: center;
@@ -836,14 +834,7 @@ body.mobile-offcanvas-open {
 }
 
 .page-hero::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 65%);
-  pointer-events: none;
+  display: none !important;
 }
 
 .page-hero h1,
@@ -1008,12 +999,7 @@ body.mobile-offcanvas-open {
 }
 
 .section-pattern::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10 C40 10 20 30 20 50 C20 70 40 85 60 80 C80 85 100 70 100 50 C100 30 80 10 60 10Z' fill='none' stroke='rgba(128,0,32,0.035)' stroke-width='2'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  display: none !important;
 }
 
 .section-pattern>* {
@@ -1021,21 +1007,14 @@ body.mobile-offcanvas-open {
   z-index: 1;
 }
 
-/* Soft blur circle decorations */
+/* Soft blur circle decorations - Disabled per design update */
 .blur-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 0;
+  display: none !important;
 }
 
-.blur-orb-green {
-  background: rgba(128, 0, 32, 0.08);
-}
-
+.blur-orb-green,
 .blur-orb-amber {
-  background: rgba(212, 175, 55, 0.06);
+  display: none !important;
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -1566,38 +1545,14 @@ body.mobile-offcanvas-open {
 }
 
 /* Ambient Glow Orbs */
-.cta-glow-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.cta-glow-1 {
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0) 70%);
-  top: -120px;
-  right: -100px;
-  animation: ctaPulse 6s ease-in-out infinite alternate;
-}
-
+.cta-glow-orb,
+.cta-glow-1,
 .cta-glow-2 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(128, 0, 32, 0.4) 0%, rgba(128, 0, 32, 0) 70%);
-  bottom: -100px;
-  left: -80px;
-  animation: ctaPulse 8s ease-in-out infinite alternate-reverse;
+  display: none !important;
 }
 
 .cta-pattern-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  pointer-events: none;
+  display: none !important;
 }
 
 @keyframes ctaPulse {
@@ -3256,8 +3211,7 @@ div.my-4.p-3.border-start.border-4:hover {
 
 /* Dark Royal Maroon Hero Header for Package Detail Pages */
 .package-hero-header {
-  background: linear-gradient(135deg, rgba(35, 2, 8, 0.96) 0%, rgba(88, 11, 23, 0.92) 100%),
-              url('../assets/img/gathering_perusahaan_lapangan_outboundindonesia.webp') center/cover no-repeat !important;
+  background: #580B17 !important;
   padding: 45px 0 40px !important;
   color: #ffffff !important;
   position: relative;

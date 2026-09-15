@@ -50,6 +50,13 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://outboundindonesia.web.id/penulis</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Package Detail Pages -->
   <url>
     <loc>https://outboundindonesia.web.id/Corporate-Gathering-Malang</loc>

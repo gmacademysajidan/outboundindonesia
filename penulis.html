@@ -71,6 +71,16 @@
         "url": "https://outboundindonesia.web.id/penulis",
         "name": "Tim Penulis & Dewan Redaksi | Outbound Indonesia",
         "description": "Konsultasi para praktisi instruktur certified outbound, spesialis keselamatan wahana ketinggian, master games facilitator, serta konsultan team building corporate di balik artikel edukasi Outbound Indonesia."
+      },
+      {
+        "@type": "Person",
+        "@id": "https://outboundindonesia.web.id/penulis#sajidan",
+        "name": "Muhammad Sajidan",
+        "jobTitle": "Author & Outdoor Content Specialist",
+        "worksFor": {
+          "@id": "https://outboundindonesia.web.id/#organization"
+        },
+        "image": "https://outboundindonesia.web.id/assets/img/sajidan.webp"
       }
     ]
   }
@@ -84,6 +94,7 @@
       padding: 32px 24px;
       transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      width: 100%;
     }
 
     .author-card:hover {
@@ -131,6 +142,43 @@
       border-left: 4px solid var(--primary-amber, #ffbf00);
       padding: 24px 28px;
       border-radius: 0 12px 12px 0;
+    }
+
+    /* Responsif Otomatis & Proporsional Tampilan Mobile */
+    @media (max-width: 767.98px) {
+      .author-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+      .author-avatar-lg {
+        width: 96px;
+        height: 96px;
+        margin-bottom: 14px;
+      }
+      .author-card h4 {
+        font-size: 1.2rem;
+      }
+      .editorial-badge {
+        font-size: 0.72rem;
+        padding: 3px 10px;
+      }
+      .cert-pill {
+        font-size: 0.72rem;
+        padding: 3px 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .author-card {
+        padding: 20px 14px;
+      }
+      .author-avatar-lg {
+        width: 86px;
+        height: 86px;
+      }
+      .author-card p {
+        font-size: 0.86rem !important;
+      }
     }
   </style>
 </head>
@@ -272,111 +320,47 @@
 
       <div class="row g-4 justify-content-center">
 
-        <!-- Author Card 1 -->
-        <div class="col-lg-4 col-md-6">
+        <!-- Author Card 1: Tim Outbound Indonesia -->
+        <div class="col-lg-5 col-md-6 col-12">
           <div class="author-card text-center h-100 d-flex flex-column">
-            <img src="assets/img/profesional_tertawa_kegiatan_outboundindonesia.webp" alt="Drs. Heru Setyawan, M.Pd." class="author-avatar-lg">
-            <span class="editorial-badge mb-2">Lead Editor &amp; Master Facilitator</span>
-            <h4 class="fw-bold text-dark mb-1">Drs. Heru Setyawan, M.Pd.</h4>
-            <p class="text-muted small mb-3"><i class="fa-solid fa-briefcase me-1"></i> Senior Consultant Experiential Learning</p>
+            <img src="assets/img/favicon-removebg-preview.webp" alt="Tim Outbound Indonesia" class="author-avatar-lg author-avatar-logo">
+            <span class="editorial-badge mb-2">Dewan Redaksi Utama</span>
+            <h4 class="fw-bold text-dark mb-1">Tim Outbound Indonesia</h4>
+            <p class="text-muted small mb-3"><i class="fa-solid fa-users-gear me-1"></i> Tim Redaksi &amp; Experiential Learning Specialist</p>
             <p class="text-muted flex-grow-1" style="font-size: 0.9rem; line-height: 1.6;">
-              Pengalaman lebih dari 15 tahun merancang simulasi manajemen, game dinamika kelompok, dan program team building untuk BUMN, korporasi swasta, dan kementerian.
+              Tim redaksi dan praktisi resmi penyusun, penelaah, serta penguji materi edukasi, panduan keselamatan outdoor, dan modul program team building corporate Outbound Indonesia.
             </p>
             <div class="pt-3 border-top mt-auto">
               <div class="mb-2">
-                <span class="cert-pill">BNSP Lead Assessor</span>
-                <span class="cert-pill">Master Team Building</span>
+                <span class="cert-pill">Sertifikasi BNSP</span>
+                <span class="cert-pill">SOP Standard AELI</span>
+                <span class="cert-pill">Dewan Redaksi</span>
               </div>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20materi%20dengan%20Drs.%20Heru%20Setyawan" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
-                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Team Building
+              <a href="https://wa.me/6282211221909?text=Halo%20Tim%20Redaksi%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20program%20outbound" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
+                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Tim Redaksi
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Author Card 2 -->
-        <div class="col-lg-4 col-md-6">
+        <!-- Author Card 2: Muhammad Sajidan -->
+        <div class="col-lg-5 col-md-6 col-12">
           <div class="author-card text-center h-100 d-flex flex-column">
-            <img src="assets/img/sesi_materi_perusahaan_outboundindonesia.webp" alt="Capt. Budi Raharjo" class="author-avatar-lg">
-            <span class="editorial-badge mb-2">Spesialis Technical &amp; Safety</span>
-            <h4 class="fw-bold text-dark mb-1">Capt. Budi Raharjo, S.T.</h4>
-            <p class="text-muted small mb-3"><i class="fa-solid fa-shield-halved me-1"></i> High Rope &amp; Zip Line Safety Inspector</p>
+            <img src="assets/img/sajidan.webp" alt="Muhammad Sajidan" class="author-avatar-lg">
+            <span class="editorial-badge mb-2">Penulis &amp; Praktisi Outdoor</span>
+            <h4 class="fw-bold text-dark mb-1">Muhammad Sajidan</h4>
+            <p class="text-muted small mb-3"><i class="fa-solid fa-pen-nib me-1"></i> Author &amp; Outdoor Content Specialist</p>
             <p class="text-muted flex-grow-1" style="font-size: 0.9rem; line-height: 1.6;">
-              Pakar inspeksi peralatan high rope, konstruksi wahana flying fox, analisis kekuatan karabiner/harness, serta perancang sistem rigging standar internasional.
+              Praktisi dan penulis spesialis modul team building, panduan keselamatan outdoor, manajemen risiko kegiatan alam bebas, serta pengembang materi edukasi Outbound Indonesia.
             </p>
             <div class="pt-3 border-top mt-auto">
               <div class="mb-2">
-                <span class="cert-pill">Rigging Certified</span>
-                <span class="cert-pill">High Rope Inspector</span>
+                <span class="cert-pill">Fasilitator Outbound</span>
+                <span class="cert-pill">Outdoor Content Specialist</span>
+                <span class="cert-pill">Tim Penulis Utama</span>
               </div>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20keselamatan%20dengan%20Capt.%20Budi%20Raharjo" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
-                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Safety &amp; High Rope
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Author Card 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="author-card text-center h-100 d-flex flex-column">
-            <img src="assets/img/tos_tantangan_tim_outboundindonesia.webp" alt="Rina Astuti, S.Psi." class="author-avatar-lg">
-            <span class="editorial-badge mb-2">Penulis Psikologi Lapangan</span>
-            <h4 class="fw-bold text-dark mb-1">Rina Astuti, S.Psi.</h4>
-            <p class="text-muted small mb-3"><i class="fa-solid fa-brain me-1"></i> Psikolog Industri &amp; Fasilitator Motivasi</p>
-            <p class="text-muted flex-grow-1" style="font-size: 0.9rem; line-height: 1.6;">
-              Mengulas aspek psikologi kelompok, komunikasi pasca-krisis dalam tim, ice breaking strategis, serta debriefing efisien dalam kegiatan outbound.
-            </p>
-            <div class="pt-3 border-top mt-auto">
-              <div class="mb-2">
-                <span class="cert-pill">Psikolog Industri</span>
-                <span class="cert-pill">Debriefing Master</span>
-              </div>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20psikologi%20tim%20dengan%20Rina%20Astuti" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
-                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Psikologi Tim
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Author Card 4 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="author-card text-center h-100 d-flex flex-column">
-            <img src="assets/img/arung_jeram_peserta_outboundindonesia.webp" alt="Bayu Pratama, S.Or." class="author-avatar-lg">
-            <span class="editorial-badge mb-2">Instruktur River Adventure</span>
-            <h4 class="fw-bold text-dark mb-1">Bayu Pratama, S.Or.</h4>
-            <p class="text-muted small mb-3"><i class="fa-solid fa-water-ladder me-1"></i> Head River Guide &amp; Swiftwater Rescue</p>
-            <p class="text-muted flex-grow-1" style="font-size: 0.9rem; line-height: 1.6;">
-              Spesialis arung jeram Malang (Sungai Brantas &amp; Kasembon), penguji sertifikasi pemandu rafting, dan penyusun SOP pertolongan pertama di perairan deras.
-            </p>
-            <div class="pt-3 border-top mt-auto">
-              <div class="mb-2">
-                <span class="cert-pill">Swiftwater Rescue</span>
-                <span class="cert-pill">Grade 4 Rafting Guide</span>
-              </div>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20rafting%20dengan%20Bayu%20Pratama" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
-                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Paket Rafting
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Author Card 5 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="author-card text-center h-100 d-flex flex-column">
-            <img src="assets/img/tenda_camping_matahari_terbit_outboundindonesia.webp" alt="Eko Wijaya" class="author-avatar-lg">
-            <span class="editorial-badge mb-2">Spesialis Logistik &amp; Gear</span>
-            <h4 class="fw-bold text-dark mb-1">Eko Wijaya</h4>
-            <p class="text-muted small mb-3"><i class="fa-solid fa-campground me-1"></i> Outdoor Equipment &amp; Navigasi Land</p>
-            <p class="text-muted flex-grow-1" style="font-size: 0.9rem; line-height: 1.6;">
-              Praktisi packing carrier 4-zone, layering system pakaian suhu rendah, perawatan peralatan tenda camping, serta pemetaan jalur navigasi darat pegunungan.
-            </p>
-            <div class="pt-3 border-top mt-auto">
-              <div class="mb-2">
-                <span class="cert-pill">Navigasi Darat</span>
-                <span class="cert-pill">Gear Maintenance</span>
-              </div>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20logistik%20dengan%20Eko%20Wijaya" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
-                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi Logistik &amp; Gear
+              <a href="https://wa.me/6282211221909?text=Halo%20Muhammad%20Sajidan,%20saya%20ingin%20konsultasi%20materi%20outbound" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm w-100 mt-2">
+                <i class="fa-brands fa-whatsapp me-1 text-success"></i> Konsultasi via WhatsApp
               </a>
             </div>
           </div>

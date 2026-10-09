@@ -157,4 +157,49 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- New Blog Articles (Pillar & Clusters) -->
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/outbound-indonesia</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/outbound-indonesia-team-building.webp</image:loc>
+      <image:title>Panduan Komprehensif Outbound Indonesia</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/metode-experiential-learning-outbound-games-team-building</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/siklus-kolb-outbound.webp</image:loc>
+      <image:title>Experiential Learning Outbound dan 12 Games Team Building</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/biaya-paket-outbound-perusahaan-lokasi-terbaik</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/rab-outbound-perusahaan.webp</image:loc>
+      <image:title>Biaya Paket Outbound Perusahaan dan Lokasi Terbaik</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/standar-fasilitator-outbound-bnsp-aeli-vendor-eo</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/sertifikasi-fasilitator-outbound.webp</image:loc>
+      <image:title>Standar Fasilitator Outbound BNSP AELI dan Pilih Vendor</image:title>
+    </image:image>
+  </url>
+
 </urlset>

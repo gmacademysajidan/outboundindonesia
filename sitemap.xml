@@ -247,4 +247,49 @@
     </image:image>
   </url>
 
+  <!-- Vendor Selection Pillar & Clusters -->
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/daftar-vendor-outbound-di-indonesia</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/matriks-vendor-outbound-indonesia.webp</image:loc>
+      <image:title>Daftar Vendor Outbound di Indonesia dan Perbandingannya</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/kriteria-standar-evaluasi-vendor-outbound-kantor</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/checklist-legalitas-vendor-outbound.webp</image:loc>
+      <image:title>Kriteria Memilih Vendor Outbound Kantor yang Aman</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/perbedaan-outing-gathering-team-building-outbound-training</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/tabel-perbedaan-outing-dan-outbound-training.webp</image:loc>
+      <image:title>Beda Outing, Gathering, Team Building, Outbound Training</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/vendor-outbound-per-wilayah-dan-estimasi-biaya</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/peta-vendor-outbound-jawa-jawa-barat.webp</image:loc>
+      <image:title>Vendor Outbound per Wilayah dan Estimasi Biaya Paket</image:title>
+    </image:image>
+  </url>
+
 </urlset>

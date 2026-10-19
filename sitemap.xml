@@ -202,4 +202,49 @@
     </image:image>
   </url>
 
+  <!-- Outbound Training Educational Pillar & Clusters -->
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/pengertian-outbound-training</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/pengertian-outbound-training.webp</image:loc>
+      <image:title>Pengertian Outbound Training, Ciri, dan Contoh</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/contoh-kegiatan-outbound-training</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/contoh-kegiatan-outbound-low-impact.webp</image:loc>
+      <image:title>Contoh Kegiatan Outbound Training Seru dan Bermakna</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/manfaat-outbound-training</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/manfaat-outbound-training-karyawan.webp</image:loc>
+      <image:title>Manfaat Outbound Training bagi Karyawan &amp; Perusahaan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/cara-mengukur-keberhasilan-outbound-training</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/evaluasi-outbound-training.webp</image:loc>
+      <image:title>Cara Mengukur Keberhasilan Outbound Training</image:title>
+    </image:image>
+  </url>
+
 </urlset>

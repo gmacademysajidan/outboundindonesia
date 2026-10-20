@@ -292,4 +292,49 @@
     </image:image>
   </url>
 
+  <!-- Team Building & Outbound Comparison Pillar & Clusters -->
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/perbedaan-outbound-dan-team-building</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/perbedaan-outbound-dan-team-building.webp</image:loc>
+      <image:title>Perbedaan Outbound dan Team Building</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/cara-memilih-vendor-outbound-dan-team-building</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/kriteria-evaluasi-vendor-outbound.webp</image:loc>
+      <image:title>Cara Memilih Vendor Outbound dan Team Building: 7 Kriteria</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/cara-mengukur-efektivitas-roi-team-building</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/kpi-team-building-pasca-event.webp</image:loc>
+      <image:title>Cara Mengukur Efektivitas dan ROI Team Building Korporat</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/hybrid-outbound-team-building-2d1n-silo-mentality</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/rundown-hybrid-2d1n.webp</image:loc>
+      <image:title>Hybrid Outbound dan Team Building 2D1N Atasi Silo Mentality</image:title>
+    </image:image>
+  </url>
+
 </urlset>

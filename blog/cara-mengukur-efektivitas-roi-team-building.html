@@ -463,21 +463,54 @@
 
             </div>
 
-            <!-- Author Bio Section Box -->
-            <div class="author-bio-box p-4 rounded-4 mt-5 bg-light border">
-              <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start text-center text-sm-start gap-3">
-                <img src="../assets/img/favicon-removebg-preview.webp" alt="Tim Outbound Indonesia" class="rounded-circle" style="width: 75px; height: 75px; object-fit: contain; background: #fff; padding: 5px; border: 2px solid #800000;">
-                <div>
-                  <h5 class="fw-bold text-dark mb-1">Tentang Tim Outbound Indonesia</h5>
-                  <p class="text-muted small mb-2"><i class="fa-solid fa-certificate text-warning me-1"></i> Instruktur Outbound Terlisensi &amp; Tim Redaksi Profesional</p>
-                  <p class="text-secondary small mb-0" style="line-height: 1.6;">
-                    Tim Redaksi dan Instruktur Senior Outbound Indonesia berdedikasi membagikan wawasan berbasis data seputar corporate team building, manajemen risiko outbound training, dan pengembangan SDM perusahaan di seluruh wilayah Malang Raya dan Jawa Timur.
-                  </p>
+              <!-- Author Profile Box Link -->
+              <div class="author-profile-box p-4 rounded-4 bg-light border my-4">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="../assets/img/favicon-removebg-preview.webp" alt="Tim Penulis &amp; Redaksi Outbound Indonesia" class="rounded-circle border shadow-sm" style="width: 58px; height: 58px; object-fit: cover;">
+                  <div>
+                    <span class="badge bg-warning text-dark mb-1 fw-semibold"><i class="fa-solid fa-user-gear me-1"></i> Penulis &amp; Dewan Redaksi</span>
+                    <h5 class="fw-bold mb-1"><a href="../penulis" class="text-dark text-decoration-none">Tim Outbound Indonesia <i class="fa-solid fa-arrow-up-right-from-square text-warning small ms-1"></i></a></h5>
+                    <p class="text-muted small mb-0">Praktisi instruktur certified BNSP, spesialis simulasi team building korporat, dan konsultan pengembangan SDM.</p>
+                  </div>
                 </div>
               </div>
+
             </div>
 
           </article>
+        </div>
+
+        <!-- Right Sticky Sidebar -->
+        <div class="col-lg-4 col-md-12">
+          <aside class="article-sidebar-sticky">
+            
+            <!-- Table of Contents Sidebar Widget -->
+            <div class="toc-widget">
+              <div class="toc-header">
+                <span><i class="fa-solid fa-list-ul me-2"></i> Daftar Isi</span>
+              </div>
+              <ul class="toc-list">
+                <li class="toc-item"><a href="#sec-1"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Mitos Acara Seru vs Perubahan</a></li>
+                <li class="toc-item"><a href="#sec-2"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>5 Indikator Keberhasilan</a></li>
+                <li class="toc-item"><a href="#sec-3"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Kerangka KPI Pasca-Event</a></li>
+                <li class="toc-item"><a href="#sec-4"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Survei Likert &amp; eNPS</a></li>
+                <li class="toc-item"><a href="#sec-5"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Membawa Hasil ke Kantor</a></li>
+                <li class="toc-item"><a href="#sec-6"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Menghitung &amp; Membingkai ROI</a></li>
+                <li class="toc-item"><a href="#sec-7"><i class="fa-solid fa-chevron-right me-1 text-warning small"></i>Kesimpulan Praktis</a></li>
+              </ul>
+            </div>
+
+            <!-- Banner CTA Widget -->
+            <div class="promo-banner-widget">
+              <div class="promo-banner-title">Jasa Paket Outbound Malang</div>
+              <div class="promo-banner-heading">Ukur Dampak Nyata Team Building Korporat</div>
+              <div class="promo-banner-desc">Konsultasikan rancangan program berbasis indikator kinerja terukur bersama Outbound Indonesia!</div>
+              <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20evaluasi%20ROI%20team%20building" target="_blank" rel="noopener noreferrer" class="promo-banner-btn">
+                <i class="fa-brands fa-whatsapp me-1"></i> Hubungi WhatsApp (0822-1122-1909)
+              </a>
+            </div>
+
+          </aside>
         </div>
 
       </div>
@@ -533,105 +566,81 @@
   </section>
 
   <!-- Floating Action Buttons (WhatsApp + Back to Top) -->
-  <div class="floating-actions">
-    <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20evaluasi%20ROI%20team%20building" target="_blank" rel="noopener noreferrer" class="floating-btn wa-btn" aria-label="Chat WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <button id="backToTopBtn" class="floating-btn top-btn" aria-label="Kembali ke Atas">
+  <div class="floating-widget-group">
+    <button type="button" id="backToTopBtn" class="floating-btn floating-btn-top" aria-label="Kembali ke atas">
       <i class="fa-solid fa-arrow-up"></i>
+      <span class="floating-tooltip">Ke Atas</span>
     </button>
+    <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20evaluasi%20ROI%20team%20building"
+      target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-wa" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-tooltip">Chat WhatsApp</span>
+    </a>
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer-custom">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
-          <h5 class="footer-title">Outbound Indonesia</h5>
-          <p class="footer-desc">Provider resmi pelatihan outbound training, corporate team building, rafting adventure, paintball, dan family gathering perusahaan terbaik di Jawa Timur.</p>
-          <div class="footer-contact mt-3">
-            <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-warning"></i> Jl. Raya Darmo No. 45, Surabaya</p>
-            <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-warning"></i> Basecamp: Songgoriti, Kota Batu - Malang</p>
-            <p class="mb-1"><i class="fa-solid fa-phone me-2 text-warning"></i> +62 822-1122-1909</p>
-            <p class="mb-0"><i class="fa-solid fa-envelope me-2 text-warning"></i> info@outboundindonesia.com</p>
+          <div class="footer-brand">
+            <i class="fa-solid fa-leaf"></i>
+            <span>OUTBOUND INDONESIA</span>
+          </div>
+          <p class="text-white-50 mb-3" style="font-size: 0.9rem; line-height: 1.7;">
+            Pusat Outbound, Edukasi, dan Team Building di Malang, Surabaya, Batu, dan Mojokerto Jawa Timur. Pengalaman berkesan di alam terbuka yang asri dan sejuk.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram Outbound Indonesia"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Facebook Outbound Indonesia"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube Outbound Indonesia"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok Outbound Indonesia"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
           </div>
         </div>
+
         <div class="col-lg-2 col-md-6">
-          <h5 class="footer-title">Paket Unggulan</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="../Outbound-Team-Building-Corporate-Malang">Corporate Team Building</a></li>
-            <li><a href="../Fun-Outbound-Malang">Fun Outbound Games</a></li>
-            <li><a href="../Rafting-Arung-Jeram-Malang">Rafting Adventure Kasembon</a></li>
-            <li><a href="../Paintball-Full-Combat-Malang">Paintball Battle Simulation</a></li>
-            <li><a href="../Outbound-Sekolah-dan-Mahasiswa-Malang">Outbound Edukasi Sekolah</a></li>
+          <h5>Navigasi</h5>
+          <ul class="footer-links">
+            <li><a href="../"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Beranda</a></li>
+            <li><a href="../tentang"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Tentang Kami</a></li>
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Paket Outbound</a></li>
+            <li><a href="../fasilitas"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Fasilitas</a></li>
+            <li><a href="../artikel"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Artikel &amp; Tips</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-title">Pusat Pengetahuan</h5>
-          <ul class="footer-links list-unstyled">
-            <li><a href="perbedaan-outbound-dan-team-building">Beda Outbound vs Team Building</a></li>
-            <li><a href="cara-memilih-vendor-outbound-dan-team-building">7 Kriteria Evaluasi Vendor</a></li>
-            <li><a href="cara-mengukur-efektivitas-roi-team-building">Mengukur Efektivitas &amp; ROI</a></li>
-            <li><a href="hybrid-outbound-team-building-2d1n-silo-mentality">Hybrid 2D1N Solusi Silo Mentality</a></li>
-            <li><a href="../artikel">Semua Artikel &amp; Panduan</a></li>
+          <h5>Paket Populer</h5>
+          <ul class="footer-links">
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Corporate Team Building</a></li>
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Kids Outbound Edutainment</a></li>
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Family Gathering</a></li>
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Paintball &amp; Flying Fox</a></li>
+            <li><a href="../paket"><i class="fa-solid fa-chevron-right me-2 text-warning small"></i>Camping 2D1N</a></li>
           </ul>
         </div>
+
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-title">Konsultasi HRD Cepat</h5>
-          <p class="footer-desc small">Dapatkan proposal kustom, matriks simulasi, dan estimasi anggaran sesuai kebutuhan spesifik perusahaan Anda.</p>
-          <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Outbound%20Indonesia,%20saya%20ingin%20konsultasi%20evaluasi%20ROI%20team%20building" target="_blank" rel="noopener noreferrer" class="btn btn-amber w-100 py-2 mt-2 text-white fw-bold">
-            <i class="fa-brands fa-whatsapp me-1"></i> Hubungi Tim Ahli
-          </a>
+          <h5>Kontak &amp; Lokasi</h5>
+          <ul class="footer-links text-white-50" style="font-size: 0.9rem;">
+            <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-location-dot text-warning mt-1"></i> Jl. Raya Darmo No. 45, Tegalsari, Surabaya, Jawa Timur</li>
+            <li class="mb-2 d-flex gap-2"><i class="fa-solid fa-phone text-warning mt-1"></i> (0341) 426000</li>
+            <li class="mb-2 d-flex gap-2"><i class="fa-brands fa-whatsapp text-warning mt-1"></i> 0822-1122-1909</li>
+          </ul>
         </div>
       </div>
-      <hr class="my-4 border-secondary opacity-25">
-      <div class="row align-items-center copyright-row">
-        <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0 small text-muted">&copy; 2026 Outbound Indonesia. Hak cipta dilindungi undang-undang.</p>
-        </div>
-        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-          <ul class="list-inline mb-0 small">
-            <li class="list-inline-item"><a href="../tentang" class="text-muted text-decoration-none">Tentang Kami</a></li>
-            <li class="list-inline-item text-muted">&bull;</li>
-            <li class="list-inline-item"><a href="../fasilitas" class="text-muted text-decoration-none">Fasilitas</a></li>
-            <li class="list-inline-item text-muted">&bull;</li>
-            <li class="list-inline-item"><a href="../penulis" class="text-muted text-decoration-none">Dewan Redaksi</a></li>
-          </ul>
-        </div>
+
+      <div class="footer-bottom text-center">
+        <p class="m-0 text-white-50">
+          &copy; 2026 Outbound Indonesia. All rights reserved. Built for Outbound Indonesia Experience.
+        </p>
       </div>
     </div>
   </footer>
 
   <!-- JS Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Back to top logic
-      const backToTopBtn = document.getElementById('backToTopBtn');
-      if (backToTopBtn) {
-        window.addEventListener('scroll', function () {
-          if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-          } else {
-            backToTopBtn.classList.remove('show');
-          }
-        });
-        backToTopBtn.addEventListener('click', function () {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-      // Copy link button
-      const copyBtn = document.getElementById('copyLinkBtn');
-      if (copyBtn) {
-        copyBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          navigator.clipboard.writeText(window.location.href).then(() => {
-            alert('Tautan artikel berhasil disalin!');
-          });
-        });
-      }
-    });
-  </script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/article-detail.js" defer></script>
 </body>
 </html>

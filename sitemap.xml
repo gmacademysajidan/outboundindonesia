@@ -225,16 +225,7 @@
     </image:image>
   </url>
 
-  <url>
-    <loc>https://outboundindonesia.web.id/blog/manfaat-outbound-training</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://outboundindonesia.web.id/assets/img/manfaat-outbound-training-karyawan.webp</image:loc>
-      <image:title>Manfaat Outbound Training bagi Karyawan &amp; Perusahaan</image:title>
-    </image:image>
-  </url>
+  
 
   <url>
     <loc>https://outboundindonesia.web.id/blog/cara-mengukur-keberhasilan-outbound-training</loc>
@@ -334,6 +325,66 @@
     <image:image>
       <image:loc>https://outboundindonesia.web.id/assets/img/rundown-hybrid-2d1n.webp</image:loc>
       <image:title>Hybrid Outbound dan Team Building 2D1N Atasi Silo Mentality</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/outbound-training</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/outbound-training-tim-kerja-sama.webp</image:loc>
+      <image:title>Outbound Training: Panduan Komprehensif Pengertian, Jenis, Manfaat, Biaya, dan Tips Memilih</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/siklus-belajar-kolb-outbound.webp</image:loc>
+      <image:title>Diagram Siklus Belajar Kolb Outbound Training</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/jenis-permainan-outbound-training</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/permainan-balloon-train-outbound.webp</image:loc>
+      <image:title>Permainan Balloon Train Outbound Training</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/raft-building-outbound.webp</image:loc>
+      <image:title>Raft Building Outbound Team Building Air</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/manfaat-outbound-training</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/debriefing-outbound-tim.webp</image:loc>
+      <image:title>Debriefing Outbound Training Tim Fasilitator</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/kerja-sama-tim-kantor.webp</image:loc>
+      <image:title>Kerja Sama Tim Kantor Harmonis Pasca Outbound</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://outboundindonesia.web.id/blog/merencanakan-outbound-training</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/perencanaan-outbound-training.webp</image:loc>
+      <image:title>Perencanaan Outbound Training Komprehensif</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://outboundindonesia.web.id/assets/img/pemeriksaan-keselamatan-outbound.webp</image:loc>
+      <image:title>Pemeriksaan Keselamatan Safety Outbound</image:title>
     </image:image>
   </url>
 
